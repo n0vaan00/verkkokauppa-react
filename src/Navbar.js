@@ -13,13 +13,22 @@ export default function NavBar() {
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
         <li class="nav-item">
-          <Link className="nav-link" to="/">Home</Link>
+          <Link className="nav-link" to="/">Pitkähihaiset</Link>
         </li>
         <li class="nav-item">
-        <Link className="nav-link" to="/about">About</Link>
+        <Link className="nav-link" to="/about">T-paidat</Link>
          </li>
         <li class="nav-item">
-        <Link className="nav-link" to="/contactus">Contact us</Link>
+        <Link className="nav-link" to="/contactus">Hupparit</Link>
+        </li>
+        <li class="nav-item">
+        <Link className="nav-link" to="/contactus">Hihattomat</Link>
+        </li>
+        <li class="nav-item">
+        <Link className="nav-link" to="/contactus">Villapaidat</Link>
+        </li>
+        <li class="nav-item">
+        <Link className="nav-link" to="/contactus">Kauluspaidat</Link>
         </li>
         
       </ul>
