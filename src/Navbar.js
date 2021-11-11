@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import './Navbar.css';
 export default function NavBar() {
     return (
         <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
   <div class="container-fluid">
     
-    <a class="navbar-brand" href="#">Paitasivusto</a>
+    <a class="navbar-brand" href="#">PaitaÄssä<img class="logonav" src="logo.png"/></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -29,6 +29,9 @@ export default function NavBar() {
         </li>
         <li class="nav-item">
         <Link className="nav-link" to="/contactus">Kauluspaidat</Link>
+        </li>
+        <li class="nav-item">
+        <Link className="nav-link" to="/contactus">Ota yhteyttä</Link>
         </li>
         
       </ul>
