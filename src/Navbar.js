@@ -13,26 +13,18 @@ export default function NavBar() {
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
         <li class="nav-item">
-          <Link className="nav-link" to="/">Pitkähihaiset</Link>
+          <Link className="nav-link" to="/pitkahihaiset">Pitkähihaiset</Link>
         </li>
         <li class="nav-item">
-        <Link className="nav-link" to="/about">T-paidat</Link>
+        <Link className="nav-link" to="/T-paidat">T-paidat</Link>
          </li>
         <li class="nav-item">
-        <Link className="nav-link" to="/contactus">Hupparit</Link>
-        </li>
-        <li class="nav-item">
-        <Link className="nav-link" to="/contactus">Hihattomat</Link>
-        </li>
-        <li class="nav-item">
-        <Link className="nav-link" to="/contactus">Villapaidat</Link>
-        </li>
-        <li class="nav-item">
-        <Link className="nav-link" to="/contactus">Kauluspaidat</Link>
+        <Link className="nav-link" to="/hihattomat">Hihattomat</Link>
         </li>
         <li class="nav-item">
         <Link className="nav-link" to="/contactus">Ota yhteyttä</Link>
         </li>
+
         
       </ul>
     </div>
