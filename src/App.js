@@ -1,4 +1,3 @@
-import logo from './logo.svg'
 import './App.css';
 import { Routes,Route } from 'react-router-dom';
 import NavBar from './Navbar';
@@ -7,8 +6,9 @@ import Home from './Home';
 import ContactUs from './ContactUs';
 import NotFound from './NotFound';
 import Footer from './Footer';
-import Pitkahihaiset from './pitkahihaiset'
-import Hihattomat from './hihattomat'
+import Pitkahihaiset from './Pitkahihaiset'
+import Hihattomat from './Hihattomat'
+import Tpaidat from './Tpaidat'
 
 function App() {
   return (

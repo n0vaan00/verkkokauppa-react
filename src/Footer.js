@@ -8,8 +8,10 @@ export default function Footer() {
                 <div className="container">
                     <p>PaitaÄssä</p>
                     <p>Maalimanlaita 666</p>
+                </div>
+                <div className="container">
                     <p>99663 Hukka</p>
-                    <span className="text-muted">This is footer</span>
+                    <p>puh: 0123456789</p>
                 </div>
                 
             </footer>
