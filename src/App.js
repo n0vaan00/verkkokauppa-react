@@ -6,9 +6,9 @@ import Home from './Home';
 import ContactUs from './ContactUs';
 import NotFound from './NotFound';
 import Footer from './Footer';
-import Pitkahihaiset from './Pitkahihaiset'
-import Hihattomat from './Hihattomat'
-import Tpaidat from './Tpaidat'
+import Pitkahihaiset from './Pitkahihaiset';
+import Hihattomat from './Hihattomat';
+import Tpaidat from './Tpaidat';
 
 function App() {
   return (
