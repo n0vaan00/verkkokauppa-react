@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import { NavDropdown } from 'react-bootstrap';
 export default function NavBar() {
     return (
         <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
@@ -12,8 +13,15 @@ export default function NavBar() {
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
+        {/* <li class="nav-item">
           <Link className="nav-link" to="/pitkahihaiset">Pitkähihaiset</Link>
+        </li> */}
+        <li>
+        <NavDropdown title="Pitkähihaiset" id="basic-nav-dropdown">
+          <NavDropdown.Item href="#action/3.1">Villapaidat</NavDropdown.Item>
+          <NavDropdown.Item href="#action/3.2">Hupparit</NavDropdown.Item>
+          <NavDropdown.Item href="#action/3.3">Kauluspaidat</NavDropdown.Item>
+        </NavDropdown>
         </li>
         <li class="nav-item">
         <Link className="nav-link" to="/T-paidat">T-paidat</Link>
@@ -24,6 +32,10 @@ export default function NavBar() {
         <li class="nav-item">
         <Link className="nav-link" to="/contactus">Ota yhteyttä</Link>
         </li>
+
+        {/* export default (
+	      <NavDropdown/>
+        ) */}
 
         
       </ul>
