@@ -63,12 +63,4 @@ export default function NavBar() {
   </div>
 </nav>
     )
-        /*  {categories.map(category => (
-            <li>
-              <Link>
-              {category.trnimi}
-              </Link>
-            </li>
-        ))} */
-      
 }
