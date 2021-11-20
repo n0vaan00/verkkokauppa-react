@@ -19,11 +19,7 @@ function App() {
     <div className="container">
       <Routes>
         <Route path="/" component={Home} exact />
-        <Route path="/pitkahihaiset" component={Pitkahihaiset} />
-        <Route path="/T-paidat" component={Tpaidat} />
-        <Route path="/hihattomat" component={Hihattomat} />
-        <Route path="/contactus" component={ContactUs} />
-        <Route component={NotFound} />
+
       </Routes>
     </div>
     <Footer />
