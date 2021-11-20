@@ -3,7 +3,6 @@ import './Footer.css';
 
 export default function Footer() {
     return (
-        <div>
             <footer class="row" className="footer">
                 <div class="col-12">
                
@@ -23,6 +22,5 @@ export default function Footer() {
                 </div>
                 </div>
             </footer>
-        </div>
     )
 }
