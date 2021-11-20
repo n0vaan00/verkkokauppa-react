@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -8,23 +7,28 @@ import axios from 'axios';
 export default function NavBar() {
 
   const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+  
     axios.get('http://localhost/verkkokauppaprojekti-back/products/getcategories.php')
     .then ((response) => {
       const json = response.data;
-      console.log(response.data);
+      console.log();
       setCategories(json);
 
     }).catch (error => {
       if(error.response === undefined) {
         alert(error);
       }else {
-      alert(error.response.data.error);
+        alert(error.response.data.error);
       }
-    })
-  }, [])
+    });
+  }, []);
 
+  if (loading) {
+    return <p>Data is loading,.,</p>
+  }
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid">
@@ -43,13 +47,14 @@ export default function NavBar() {
           </a>
           
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-          {categories.map(category => (
+            <li>TOIMIIKO</li>
+         {/*} {categories.map(category => (
             <li key={category.trnro}>
               <Link>
               {category.tuoteryhma}
               </Link>
             </li>
-          ))}
+         ))}*/}
           </ul>
           
         </li>
