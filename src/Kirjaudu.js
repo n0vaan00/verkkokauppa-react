@@ -32,7 +32,8 @@ export default function Kirjaudu() {
             <input type="text" id="postitmp" name="postitoimipaikka" placeholder="Postitoimipaikka"></input>
             <label for ="puhnum">Puhelinnumero</label>
             <input type="text" id="puhnum" name="puhelinnumero" placeholder="Puhelinnumero"></input>
-            <input type="submit" value="Submit"></input>
+            <br/>
+            <button>Submittaa</button>
         </form>
     
       </main>

@@ -46,14 +46,13 @@ export default function NavBar() {
             Dropdown
           </a>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li>TOIMIIKO</li>
-          {/*{categories.map(category => (
+          {categories.map(category => (
             <li key={category.trnro}>
               <Link>
               {category.trnimi}
               </Link>
             </li>
-         ))}*/}
+         ))}
           </ul>
         </li>
         <li className="nav-item">
