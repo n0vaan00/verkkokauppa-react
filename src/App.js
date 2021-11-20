@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import { Routes,Route } from 'react-router-dom';
 import NavBar from './Navbar';
 import Header from './Header';
@@ -14,13 +15,16 @@ function App() {
   return (
     <>
     <NavBar />
-    <Header />
+
     <div className="container">
-     <Routes>
-    <Route path="/" component={Home} exact />
-    <Route path="/contactus" component={ContactUs} />
-    <Route path="/" component={NotFound} />
-     </Routes>
+      <Routes>
+        <Route path="/" component={Home} exact />
+        <Route path="/pitkahihaiset" component={Pitkahihaiset} />
+        <Route path="/T-paidat" component={Tpaidat} />
+        <Route path="/hihattomat" component={Hihattomat} />
+        <Route path="/contactus" component={ContactUs} />
+        <Route component={NotFound} />
+      </Routes>
     </div>
     <Footer />
     </>
