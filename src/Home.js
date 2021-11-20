@@ -1,9 +1,16 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 export default function Home() {
-    return (
-        <div>
-            <p>HOMETTA</p>
-        </div>
-    )
+        return (
+            <>
+              <main>
+                <h2>Welcome to the homepage!</h2>
+                <p>You can do this, I believe in you.</p>
+              </main>
+              <nav>
+                <Link to="/kirjaudu">About</Link>
+              </nav>
+            </>
+          );
 }

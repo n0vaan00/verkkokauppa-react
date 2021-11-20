@@ -45,20 +45,19 @@ export default function NavBar() {
           <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
-          
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li>TOIMIIKO</li>
-         {/*} {categories.map(category => (
+          {categories.map(category => (
             <li key={category.trnro}>
               <Link>
-              {category.tuoteryhma}
+              {category.trnimi}
               </Link>
             </li>
-         ))}*/}
+         ))}
           </ul>
-          
         </li>
-        
+        <li className="nav-item">
+          <Link className="nav-link" aria-current="page" to="/kirjaudu">Kirjaudu</Link>
+        </li>
       </ul>
     </div>
   </div>
