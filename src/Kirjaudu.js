@@ -6,9 +6,9 @@ export default function Kirjaudu() {
       <main>
         <h2>Notta kirjaavvu sitte....</h2>
         <form>
-            <label for ="knimi">Käyttäjänimi</label>
+            <label>Käyttäjänimi</label>
             <input type="text" id="knimi" name="kayttaja" placeholder="Käyttäjänimi"></input>
-            <label for ="ssana">Salasana</label>
+            <label>Salasana</label>
             <input type="text" id="ssana" name="salasana" placeholder="Salasana"></input>
             <input type="submit" value="Sissää"></input>
         </form>
@@ -16,27 +16,27 @@ export default function Kirjaudu() {
 
          <p> Ole hyvä ja runkkaa ittes sisälle..</p>
         <form>
-            <label for ="knimi">Käyttäjänimi</label>
+            <label >Käyttäjänimi</label>
             <input type="text" id="knimi" name="kayttaja" placeholder="Käyttäjänimi"></input>
-            <label for ="ssana">Salasana</label>
+            <label >Salasana</label>
             <input type="text" id="ssana" name="salasana" placeholder="Salasana"></input>
             <br/>
-            <label for ="enimi">Etunimi</label>
+            <label >Etunimi</label>
             <input type="text" id="enimi" name="etunimi" placeholder="Etunimi"></input>
-            <label for ="snimi">Sukunimi</label>
+            <label >Sukunimi</label>
             <input type="text" id="snimi" name="sukunimi" placeholder="Sukunimi"></input>
-            <label for ="osoite">Osoite</label>
+            <label >Osoite</label>
             <input type="text" id="osoite" name="osoitenimi" placeholder="Osoite"></input>
-            <label for ="postinro">Postinumero</label>
+            <label >Postinumero</label>
             <input type="text" id="postinro" name="postinumero" placeholder="Postinumero"></input>
-            <label for ="postitmp">Postitoimipaikka</label>
+            <label >Postitoimipaikka</label>
             <input type="text" id="postitmp" name="postitoimipaikka" placeholder="Postitoimipaikka"></input>
-            <label for ="puhnum">Puhelinnumero</label>
+            <label >Puhelinnumero</label>
             <input type="text" id="puhnum" name="puhelinnumero" placeholder="Puhelinnumero"></input>
             <br/>
             <button>Submittaa</button>
         </form>
-            <div style={{'padding-top': '100px'}}></div>
+            <div style={{'paddingTop': '100px'}}></div>
               <nav>
                 <Link to="/admin">Admin</Link>
               </nav>

@@ -1,15 +1,13 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Navbar } from 'react-bootstrap';
+
 
 
 export default function NavBar({url}) {
 
   const [categories, setCategories] = useState([]);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
   
@@ -28,9 +26,6 @@ export default function NavBar({url}) {
     });
   }, []);
 
-  if (loading) {
-    return <p>Data is loading,.,</p>
-  }
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid">

@@ -2,7 +2,8 @@ import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 
 
-    const URL = 'http://localhost/verkkokauppaprojekti-back/';
+    const URL = 'http://localhost/verkkokauppaprojekti-back/products/';
+    const SHOW = 'getcategories.php'
 
 export default function Admin() {
 
@@ -13,7 +14,7 @@ export default function Admin() {
     function save(e) {
         e.preventDefault();
         const json = JSON.stringify({trnimi:ryhma})
-        axios.post(URL + 'products/savecategory.php',json,{
+        axios.post(URL + 'savecategory.php',json,{
           headers: {
             'Content-Type' : 'application/json'
           }
@@ -22,13 +23,17 @@ export default function Admin() {
           setTryhma(tryhma => [...tryhma,response.data]);
           setRyhma('');
         }).catch (error => {
-          alert(error.response.data.error)
-        });
+            if(error.response === undefined) {
+              alert(error);
+            }else {
+              alert(error.response.data.error);
+            }
+          });
       }
 
       function remove(id) {
         const json = JSON.stringify({id:id})
-        axios.post(URL + 'products/deletecategory.php', json, {
+        axios.post(URL + 'deletecategory.php', json, {
           headers: {
             'Content-Type' : 'application/json'
           }
@@ -42,7 +47,7 @@ export default function Admin() {
       }
 
       useEffect(() => {
-        axios.get(URL)
+        axios.get(URL+SHOW)
           .then((response) => {
             setTryhma(response.data);
           }).catch(error => {
