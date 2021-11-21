@@ -23,10 +23,10 @@ export default function Home({url,category}) {
   }, [category])
         return (
             <>
-            <div style={{'padding-top': '100px'}}>
-              <h3>Products for {category}</h3>
-              {product.map(product => (
-                <div key={product.tuotenro}>
+            <div style={{'paddingTop': '100px'}}>
+              <h3>Products for</h3>
+              {products.map(product => (
+                <div key={product.trnro}>
                   
                   <p>{product.trnimi}</p>
                   <p>{product.tuotenimi}</p>
