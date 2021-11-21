@@ -26,11 +26,10 @@ export default function Home({url,category}) {
             <>
             <div style={{'paddingTop': '100px'}}>
               <h3>Products for {category?.trnimi}</h3>
-              {products.map(product => (
+              {product.map(product => (
                 <div key={product.tuotenro}>
-                  
-                  <p>{product.trnimi}</p>
                   <p>{product.tuotenimi}</p>
+                  <p>{product.hinta}</p>
                    {/*} <div>
                       <img src={url + 'images/' + product.image} alt="" />
               </div> */}

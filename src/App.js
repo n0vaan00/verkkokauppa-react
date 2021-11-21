@@ -10,7 +10,7 @@ import Admin from './Admin';
 const URL = 'http://localhost/verkkokauppaprojekti-back/';
 
 function App() {
-  const [category,setCategory] = useState(null);
+  const [category,setCategory] = useState(3);
   
   let location = useLocation();
 
