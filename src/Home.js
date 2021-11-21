@@ -8,8 +8,8 @@ export default function Home({url,category}) {
   const [product, setProducts] = useState([]);
 
   useEffect(() => {
-    console.log(category)
-    axios.get(url + 'products/getproducts.php/' + category.trnro)
+    
+    axios.get(url + 'products/getproducts.php/' + category?.trnro)
     .then((response) => {
       const json = response.data;
       setProducts(json);
@@ -24,12 +24,11 @@ export default function Home({url,category}) {
         return (
             <>
             <div style={{'paddingTop': '100px'}}>
-              <h3>Products for</h3>
-              {products.map(product => (
-                <div key={product.trnro}>
-                  
-                  <p>{product.trnimi}</p>
+              <h3>Products for {category?.trnimi}</h3>
+              {product.map(product => (
+                <div key={product.tuotenro}>
                   <p>{product.tuotenimi}</p>
+                  <p>{product.hinta}</p>
                    {/*} <div>
                       <img src={url + 'images/' + product.image} alt="" />
               </div> */}

@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 
-export default function NavBar({url}) {
+export default function NavBar({url,setCategory}) {
 
   const [categories, setCategories] = useState([]);
 
@@ -16,7 +16,7 @@ export default function NavBar({url}) {
       const json = response.data;
       console.log();
       setCategories(json);
-
+      setCategory(json[0]);
     }).catch (error => {
       if(error.response === undefined) {
         alert(error);
