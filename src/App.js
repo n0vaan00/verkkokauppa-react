@@ -1,8 +1,8 @@
 import './App.css';
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import NavBar from './Navbar';
 import Footer from './Footer';
-import {Switch, Route } from "react-router-dom";
+import {Switch, Route, useLocation } from "react-router-dom";
 import Kirjaudu from './Kirjaudu';
 import Home from './Home';
 import Admin from './Admin';
@@ -10,7 +10,16 @@ import Admin from './Admin';
 const URL = 'http://localhost/verkkokauppaprojekti-back/';
 
 function App() {
-  const [category,setCategory] = useState(1);
+  const [category,setCategory] = useState(null);
+  
+  let location = useLocation()
+
+  useEffect(()=> {
+    if (location.state !== undefined) {
+      setCategory({trnro: location.state.trnro, trnimi: location.state.trnimi});
+      
+    }
+  },[location.state]) 
   
   return (
     <>

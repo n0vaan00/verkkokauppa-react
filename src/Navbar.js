@@ -50,7 +50,14 @@ export default function NavBar({url}) {
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
           {categories.map(category => (
             <li key={category.trnro}>
-              <Link>
+              <Link className="dropdown-item"
+              to={{
+                pathname: '/',
+                state: {
+                  trnro: category.trnro,
+                  trnimi: category.trnimi
+                }
+              }}>
               {category.trnimi}
               </Link>
             </li>
