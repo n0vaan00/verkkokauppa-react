@@ -5,10 +5,14 @@ import { Link } from "react-router-dom";
 
 
 export default function Home({url,category}) {
-  const [product, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
+<<<<<<< HEAD
     if (category !== null){
+=======
+    if (category !== null) {
+>>>>>>> 4f77b34df1d3978f463007d8939fe08698b56882
     axios.get(url + 'products/getproducts.php/' + category?.trnro)
     .then((response) => {
       const json = response.data;

@@ -12,11 +12,11 @@ const URL = 'http://localhost/verkkokauppaprojekti-back/';
 function App() {
   const [category,setCategory] = useState(null);
   
-  let location = useLocation()
+  let location = useLocation();
 
   useEffect(()=> {
     if (location.state !== undefined) {
-      setCategory({trnro: location.state.trnro, trnimi: location.state.trnimi});
+      setCategory({trnro: location.state.trnro,trnimi: location.state.trnimi});
       
     }
   },[location.state]) 
