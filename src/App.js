@@ -12,18 +12,18 @@ const URL = 'http://localhost/verkkokauppaprojekti-back/';
 function App() {
   const [category,setCategory] = useState(null);
   
-  let location = useLocation()
+  let location = useLocation();
 
   useEffect(()=> {
     if (location.state !== undefined) {
-      setCategory({trnro: location.state.trnro, trnimi: location.state.trnimi});
+      setCategory({trnro: location.state.trnro,trnimi: location.state.trnimi});
       
     }
   },[location.state]) 
   
   return (
     <>
-    <NavBar url={URL}/>
+    <NavBar url={URL} setCategory={setCategory}/>
     <div id="content" className="container-fluid">
       <Switch>
         <Route 

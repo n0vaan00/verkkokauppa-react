@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 
 
 export default function Home({url,category}) {
-  const [product, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    console.log(category)
-    axios.get(url + 'products/getproducts.php/' + category.trnro)
+    if (category !== null) {
+    axios.get(url + 'products/getproducts.php/' + category?.trnro)
     .then((response) => {
       const json = response.data;
       setProducts(json);
@@ -20,13 +20,14 @@ export default function Home({url,category}) {
         alert(error.response.data.error);
       }
     })
+  }
   }, [category])
         return (
             <>
             <div style={{'paddingTop': '100px'}}>
-              <h3>Products for</h3>
+              <h3>Products for {category?.trnimi}</h3>
               {products.map(product => (
-                <div key={product.trnro}>
+                <div key={product.tuotenro}>
                   
                   <p>{product.trnimi}</p>
                   <p>{product.tuotenimi}</p>
