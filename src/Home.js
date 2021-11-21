@@ -8,7 +8,7 @@ export default function Home({url,category}) {
   const [product, setProducts] = useState([]);
 
   useEffect(() => {
-    
+    if (category !== null){
     axios.get(url + 'products/getproducts.php/' + category?.trnro)
     .then((response) => {
       const json = response.data;
@@ -20,6 +20,7 @@ export default function Home({url,category}) {
         alert(error.response.data.error);
       }
     })
+  }
   }, [category])
         return (
             <>
