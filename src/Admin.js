@@ -72,7 +72,7 @@ export default function Admin() {
             <a href="#" className="delete" onClick={() => remove(ryhma.trnro)}>
               Delete
             </a>
-            </li>
+          </li>
         ))}
       </ol>
     </div>
