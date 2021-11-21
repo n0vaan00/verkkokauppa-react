@@ -5,6 +5,7 @@ import Footer from './Footer';
 import {Switch, Route } from "react-router-dom";
 import Kirjaudu from './Kirjaudu';
 import Home from './Home';
+import Admin from './Admin';
 
 const URL = 'http://localhost/verkkokauppaprojekti-back/';
 
@@ -26,6 +27,7 @@ function App() {
         } 
         exact />
         <Route path="/kirjaudu" component={Kirjaudu} />
+        <Route path="/admin" component={Admin} />
       </Switch>
     </div>
     <Footer />
