@@ -1,17 +1,19 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Navbar } from 'react-bootstrap';
 
 
-export default function NavBar() {
+export default function NavBar({url}) {
 
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
   
-    axios.get('http://localhost/verkkokauppaprojekti-back/products/getcategories.php')
+    axios.get(url + 'products/getcategories.php')
     .then ((response) => {
       const json = response.data;
       console.log();

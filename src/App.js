@@ -1,20 +1,30 @@
 import './App.css';
-import React from 'react';
+import React,{useState} from 'react';
 import NavBar from './Navbar';
 import Footer from './Footer';
 import {Switch, Route } from "react-router-dom";
 import Kirjaudu from './Kirjaudu';
 import Home from './Home';
 
-
+const URL = 'http://localhost/verkkokauppaprojekti-back/';
 
 function App() {
+  const [category,setCategory] = useState(1);
+  
   return (
     <>
-    <NavBar />
-    <div className="container">
+    <NavBar url={URL}/>
+    <div id="content" className="container-fluid">
       <Switch>
-        <Route path="/" component={Home} exact />
+        <Route 
+        path="/" 
+        render={() =>
+          <Home
+            url={URL}
+            category={category}
+          />
+        } 
+        exact />
         <Route path="/kirjaudu" component={Kirjaudu} />
       </Switch>
     </div>
