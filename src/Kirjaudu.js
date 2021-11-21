@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function Kirjaudu() {
     return (
@@ -35,7 +36,10 @@ export default function Kirjaudu() {
             <br/>
             <button>Submittaa</button>
         </form>
-    
+            <div style={{'padding-top': '100px'}}></div>
+              <nav>
+                <Link to="/admin">Admin</Link>
+              </nav>
       </main>
     );
 }
