@@ -1,30 +1,47 @@
 import './App.css';
-import { Routes,Route } from 'react-router-dom';
+import React,{useState,useEffect} from 'react';
 import NavBar from './Navbar';
-import Header from './Header';
-import Home from './Home';
-import ContactUs from './ContactUs';
-import NotFound from './NotFound';
 import Footer from './Footer';
-import Pitkahihaiset from './Pitkahihaiset';
-import Hihattomat from './Hihattomat';
-import Tpaidat from './Tpaidat';
+import {Switch, Route, useLocation } from "react-router-dom";
+import Kirjaudu from './Kirjaudu';
+import Home from './Home';
+import Admin from './Admin';
+
+const URL = 'http://localhost/verkkokauppaprojekti-back/';
 
 function App() {
+  const [category,setCategory] = useState(null);
+  
+  let location = useLocation();
+
+  useEffect(()=> {
+    if (location.state !== undefined) {
+      setCategory({trnro: location.state.trnro,trnimi: location.state.trnimi});
+      
+    }
+  },[location.state]) 
+  
   return (
     <>
-    <NavBar />
-    <Header />
-    <div className="container">
-     <Routes>
-    <Route path="/" component={Home} exact />
-    <Route path="/contactus" component={ContactUs} />
-    <Route path="/" component={NotFound} />
-     </Routes>
+    <NavBar url={URL} setCategory={setCategory}/>
+    <div id="content" className="container-fluid">
+      <Switch>
+        <Route 
+        path="/" 
+        render={() =>
+          <Home
+            url={URL}
+            category={category}
+          />
+        } 
+        exact />
+        <Route path="/kirjaudu" component={Kirjaudu} />
+        <Route path="/admin" component={Admin} />
+      </Switch>
     </div>
     <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

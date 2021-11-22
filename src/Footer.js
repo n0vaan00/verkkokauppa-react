@@ -3,7 +3,6 @@ import './Footer.css';
 
 export default function Footer() {
     return (
-        <div>
             <footer class="row" className="footer">
                 <div class="col-12">
                
@@ -17,12 +16,10 @@ export default function Footer() {
                 <h5>Ryhmä 8</h5>
                 <p>Anu Väyrynen</p>
                 <p>Atte Hakalahti</p>
-                <p>Anne Pyykkönen</p>
                 <p>Miika Pesonen</p>
                 <p>Jaako Taskila</p>
                 </div>
                 </div>
             </footer>
-        </div>
     )
 }
