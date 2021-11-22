@@ -76,7 +76,7 @@ export default function Adminprod() {
     <ol>
       {tuotteet?.map(tuotenimi =>(
         <li key={tuotenimi.tuotenro}>
-          {tuotenimi.tuotenimi},  Hinta: {tuotenimi.hinta},   Ryhmänumero: {tuotenimi.trnro}&nbsp;
+         {tuotenimi.tuotenimi},  Hinta: {tuotenimi.hinta},   Ryhmänumero: {tuotenimi.trnro}&nbsp;
           <a href="#" className="delete" onClick={() => removeprod(tuotenimi.tuotenro)}>
             Delete
           </a>
