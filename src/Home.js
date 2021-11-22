@@ -8,11 +8,7 @@ export default function Home({url,category}) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-<<<<<<< HEAD
     if (category !== null){
-=======
-    if (category !== null) {
->>>>>>> 4f77b34df1d3978f463007d8939fe08698b56882
     axios.get(url + 'products/getproducts.php/' + category?.trnro)
     .then((response) => {
       const json = response.data;
@@ -30,7 +26,7 @@ export default function Home({url,category}) {
             <>
             <div style={{'paddingTop': '100px'}}>
               <h3>Products for {category?.trnimi}</h3>
-              {product.map(product => (
+              {products.map(product => (
                 <div key={product.tuotenro}>
                   <p>{product.tuotenimi}</p>
                   <p>{product.hinta}</p>
