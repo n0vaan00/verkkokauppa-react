@@ -6,6 +6,8 @@ import {Switch, Route, useLocation } from "react-router-dom";
 import Kirjaudu from './Kirjaudu';
 import Home from './Home';
 import Admin from './Admin';
+import Admincat from './Admincat';
+import Adminprod from './Adminprod';
 
 const URL = 'http://localhost/verkkokauppaprojekti-back/';
 
@@ -37,6 +39,8 @@ function App() {
         exact />
         <Route path="/kirjaudu" component={Kirjaudu} />
         <Route path="/admin" component={Admin} />
+        <Route path="/admincat" component={Admincat} />
+        <Route path="/adminprod" component={Adminprod} />
       </Switch>
     </div>
     <Footer />
