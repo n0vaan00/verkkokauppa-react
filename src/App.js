@@ -11,8 +11,16 @@ const URL = 'http://localhost/verkkokauppaprojekti-back/';
 
 function App() {
   const [category,setCategory] = useState(null);
+  const [cart,setCart] = useState([]);
   
+
   let location = useLocation();
+
+  useEffect(()=> {
+    if ('cart' in localStorage) {
+      setCart(JSON.parse(localStorage.getItem('cart')));
+    }
+  },[])
 
   useEffect(()=> {
     if (location.state !== undefined) {
@@ -21,9 +29,15 @@ function App() {
     }
   },[location.state]) 
   
+  function addToCart(product) {
+    const newCart = [...cart,product];
+    setCart(newCart);
+    localStorage.setItem('cart',JSON.stringify(cart));
+  }
+
   return (
     <>
-    <NavBar url={URL} setCategory={setCategory}/>
+    <NavBar url={URL} setCategory={setCategory} cart={cart}/>
     <div id="content" className="container-fluid">
       <Switch>
         <Route 
@@ -32,6 +46,7 @@ function App() {
           <Home
             url={URL}
             category={category}
+            addToCart={addToCart}
           />
         } 
         exact />
