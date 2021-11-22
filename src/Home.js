@@ -8,7 +8,7 @@ export default function Home({url,category,addToCart}) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    if (category !== null) {
+    if (category !== null){
     axios.get(url + 'products/getproducts.php/' + category?.trnro)
     .then((response) => {
       const json = response.data;
