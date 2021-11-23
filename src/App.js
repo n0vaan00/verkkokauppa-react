@@ -8,6 +8,7 @@ import Home from './Home';
 import Admin from './Admin';
 import Admincat from './Admincat';
 import Adminprod from './Adminprod';
+import Rekisteröidy from './Rekisteröidy';
 
 const URL = 'http://localhost/verkkokauppaprojekti-back/';
 
@@ -38,6 +39,7 @@ function App() {
         } 
         exact />
         <Route path="/kirjaudu" component={Kirjaudu} />
+        <Route path="/rekisteröidy" component={Rekisteröidy} />
         <Route path="/admin" component={Admin} />
         <Route path="/admincat" component={Admincat} />
         <Route path="/adminprod" component={Adminprod} />
