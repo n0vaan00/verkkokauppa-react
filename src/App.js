@@ -8,11 +8,9 @@ import Home from './Home';
 import Admin from './Admin';
 import Admincat from './Admincat';
 import Adminprod from './Adminprod';
-<<<<<<< HEAD
 import Product from './Product';
-=======
 import Rekisteröidy from './Rekisteröidy';
->>>>>>> b324fb11f03b85c5a0bbc1c28aa7492e66ae41c8
+
 
 const URL = 'http://localhost/verkkokauppaprojekti-back/';
 
