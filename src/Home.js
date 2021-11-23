@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios';
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 
@@ -28,9 +28,17 @@ export default function Home({url,category,addToCart}) {
               <h3>Products for {category?.trnimi}</h3>
               {products.map(product => (
                 <div key={product.tuotenro}>
+                  <Link to={{
+                    pathname: '/product',
+                    state: {
+                      trnro: product.trnro,
+                      trnimi: product.trnimi
+                    }
+                  }}>
                   <p>{product.tuotenimi}</p>
+                  </Link>
                   <p>{product.hinta}</p>
-                  <button class="btn btn-primary" type="button" onClick={e => addToCart(product)}>Add to cart</button>
+                  {/* <button class="btn btn-primary" type="button" onClick={e => addToCart(product)}>Add to cart</button> */}
                    {/*} <div>
                       <img src={url + 'images/' + product.image} alt="" />
                    </div> */}

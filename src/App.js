@@ -8,11 +8,13 @@ import Home from './Home';
 import Admin from './Admin';
 import Admincat from './Admincat';
 import Adminprod from './Adminprod';
+import Product from './Product';
 
 const URL = 'http://localhost/verkkokauppaprojekti-back/';
 
 function App() {
   const [category,setCategory] = useState(null);
+  const [product,setProduct] = useState(null);
   const [cart,setCart] = useState([]);
   
 
@@ -26,8 +28,11 @@ function App() {
 
   useEffect(()=> {
     if (location.state !== undefined) {
-      setCategory({trnro: location.state.trnro,trnimi: location.state.trnimi});
-      
+      if (location.pathname==="/") {
+        setCategory({trnro: location.state.trnro,trnimi: location.state.trnimi});
+      } else if (location.pathname==="/product") {
+        setProduct({trnro: location.state.trnro,trnimi: location.state.trnimi});
+      }
     }
   },[location.state]) 
   
@@ -48,10 +53,19 @@ function App() {
           <Home
             url={URL}
             category={category}
-            addToCart={addToCart}
           />
         } 
         exact />
+        <Route
+          path="/product"
+          render={() =>
+            <Product
+              url={URL}
+              product={product}
+              addToCart={addToCart}
+            />
+          }
+          />
         <Route path="/kirjaudu" component={Kirjaudu} />
         <Route path="/admin" component={Admin} />
         <Route path="/admincat" component={Admincat} />
