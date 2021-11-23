@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 
-export default function Home({url,category}) {
+export default function Home({url,category,addToCart}) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -30,9 +30,10 @@ export default function Home({url,category}) {
                 <div key={product.tuotenro}>
                   <p>{product.tuotenimi}</p>
                   <p>{product.hinta}</p>
+                  <button class="btn btn-primary" type="button" onClick={e => addToCart(product)}>Add to cart</button>
                    {/*} <div>
                       <img src={url + 'images/' + product.image} alt="" />
-              </div> */}
+                   </div> */}
                   </div>
               ))}
             </div>
