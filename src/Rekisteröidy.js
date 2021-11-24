@@ -50,7 +50,7 @@ export default function Rekisteröidy() {
                     <button type="submit" class="btn" name="reg_user">Rekisteröidy</button>
                 </div>
                 <p>
-                    Oletko jo rekisteröitynyt? <a href="registration/register.php">Kirjaudu sisään</a>
+                    Oletko jo rekisteröitynyt? <a href="kirjaudu">Kirjaudu sisään</a>
                 </p>
             </form>
     </div>
