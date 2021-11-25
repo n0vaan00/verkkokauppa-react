@@ -12,6 +12,7 @@ import Product from './Product';
 import Rekisteröidy from './Rekisteröidy';
 
 
+
 const URL = 'http://localhost/verkkokauppaprojekti-back/';
 
 function App() {
