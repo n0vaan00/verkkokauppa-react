@@ -44,12 +44,13 @@ function App() {
     if (cart.some(item => item.id === product.id)) {
       const existingProduct = cart.filter(item => item.trnro === product.trnro);
       updateAmount(parseInt(existingProduct[0].amount) + 1,product);
-    }
+    } else {
     product["amount"] = 1;
     const newCart = [...cart,product];
     setCart(newCart);
-    localStorage.setItem('cart',JSON.stringify(cart));
+    localStorage.setItem('cart',JSON.stringify(newCart));
   }
+}
 
   function updateAmount(amount,product) {
     product.amount = amount;
