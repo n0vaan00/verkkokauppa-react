@@ -8,8 +8,9 @@ import Home from './Home';
 import Admin from './Admin';
 import Admincat from './Admincat';
 import Adminprod from './Adminprod';
-import Product from './Product';
+import Tuote from './Tuote';
 import Rekisteröidy from './Rekisteröidy';
+import Kategoria from './Kategoria';
 
 
 
@@ -17,7 +18,7 @@ const URL = 'http://localhost/verkkokauppaprojekti-back/';
 
 function App() {
   const [category,setCategory] = useState(null);
-  const [product,setProduct] = useState(null);
+  const [product,setProduct] = useState(1);
   const [cart,setCart] = useState([]);
   
 
@@ -31,7 +32,7 @@ function App() {
 
   useEffect(()=> {
     if (location.state !== undefined) {
-      if (location.pathname==="/") {
+      if (location.pathname==="/kategoria") {
         setCategory({trnro: location.state.trnro,trnimi: location.state.trnimi});
       } else if (location.pathname==="/product") {
         setProduct({trnro: location.state.trnro,trnimi: location.state.trnimi});
@@ -50,19 +51,20 @@ function App() {
     <NavBar url={URL} setCategory={setCategory} cart={cart}/>
     <div id="content" className="container-fluid">
       <Switch>
+      <Route path="/home" component={Home} />
         <Route 
-        path="/" 
+        path="/kategoria" 
         render={() =>
-          <Home
+          <Kategoria
             url={URL}
             category={category}
           />
         } 
         exact />
         <Route
-          path="/product"
+          path="/tuote"
           render={() =>
-            <Product
+            <Tuote
               url={URL}
               product={product}
               addToCart={addToCart}

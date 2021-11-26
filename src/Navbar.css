@@ -13,16 +13,16 @@ li {
 
 .nav_linkit {
     background-color: rgba(245, 245, 239, 0.582);
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large; 
     border-radius: 10px;
 }
 
 img {
-    width: 5em;
+    width: 3em;
 }
 
 a {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(122, 36, 122)
 }
 
