@@ -4,7 +4,8 @@ export default function Product({product,addToCart}) {
     return (
         
         <div style={{'padding-top': '100px'}}>
-            {product?.trnimi}
+            {product?.tuotenimi}
+            {product?.hinta}
             <button class="btn btn-primary" type="button" onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
         </div>
     )

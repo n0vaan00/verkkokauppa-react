@@ -13,6 +13,7 @@ export default function Kategoria({url,category,addToCart}) {
     .then((response) => {
       const json = response.data;
       setProducts(json);
+      console.log(json)
     }).catch (error => {
       if (error.response === undefined) {
         alert(error);
@@ -32,12 +33,14 @@ export default function Kategoria({url,category,addToCart}) {
                     pathname: '/tuote',
                     state: {
                       trnro: product.trnro,
-                      trnimi: product.trnimi
+                      trnimi: product.trnimi,
+                      hinta: product.hinta,
                     }
-                  }}>
-                  <p>{product.tuotenimi}</p>
+                  }}
+                  >
+                  <p>{product.tuotenimi} {product.hinta}</p>
                   </Link>
-                  <p>{product.hinta}</p>
+                  
                   {/* <button class="btn btn-primary" type="button" onClick={e => addToCart(product)}>Add to cart</button> */}
                    {/*} <div>
                       <img src={url + 'images/' + product.image} alt="" />
