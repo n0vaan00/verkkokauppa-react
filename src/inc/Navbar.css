@@ -1,0 +1,32 @@
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  .navbar {
+    background-image: url("img/banner.jpg");
+    height: 5em;
+}
+
+li {
+    color: black;
+}
+
+.logonav {
+    width: 50px;
+}
+
+.nav_linkit {
+    background-color: rgba(245, 245, 239, 0.582);
+    font-size: large; 
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+

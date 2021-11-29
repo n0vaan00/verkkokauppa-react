@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Rekisteröidy() {
     return (
-    <div>
+    <div style={{'paddingTop': '100px'}}>
         <h2>Rekisteröidy</h2>
             <form method="post" action="register.php">
                 <div class="input-group">
@@ -50,7 +50,7 @@ export default function Rekisteröidy() {
                     <button type="submit" class="btn" name="reg_user">Rekisteröidy</button>
                 </div>
                 <p>
-                    Oletko jo rekisteröitynyt? <a href="registration/register.php">Kirjaudu sisään</a>
+                    Oletko jo rekisteröitynyt? <a href="kirjaudu">Kirjaudu sisään</a>
                 </p>
             </form>
     </div>
