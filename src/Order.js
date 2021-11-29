@@ -1,7 +1,7 @@
 import React from 'react';
-import './Tilaus.css';
+import './Order.css';
 
-export default function Tilaus({cart,updateAmount}) {
+export default function Order({cart,updateAmount,removefromCart}) {
 
     function changeAmount(e,product) {
         updateAmount(e.target.value,product);
@@ -13,17 +13,18 @@ export default function Tilaus({cart,updateAmount}) {
             { cart.map((product) => {
                 return(
                 <tr>
-                    <td>{product.tuotenimi}</td>
-                    <td>{product.hinta} €</td>  
+                    <td style={{width: '125px'}}>{product.name}</td>
+                    <td>{product.price} €</td>  
                     <td>
                         <input 
-                        style={{width: '45px'}}
+                        style={{width: '60px'}}
                         type="number" 
                         step="1"
                         onChange={e => changeAmount(e,product)}
                         value={product.amount}
                          />
                         </td>
+                        <td><a href="#" onClick={() => removefromCart(product)}>Delete</a></td>
                 </tr>
                 );
             })}

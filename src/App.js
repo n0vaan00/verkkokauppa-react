@@ -1,18 +1,17 @@
 import './App.css';
 import React,{useState,useEffect} from 'react';
-import NavBar from './Navbar';
-import Home from './Home';
-import Footer from './Footer';
 import {Switch, Route, useLocation } from "react-router";
+import NavBar from './inc/Navbar';
+import Footer from './inc/Footer';
+import Home from './Home';
+import Order from './Order';
+import Product from './Product';
 import Kirjaudu from './Kirjaudu';
 import Admin from './Admin';
 import Admincat from './Admincat';
 import Adminprod from './Adminprod';
-import Tuote from './Tuote';
 import Rekisteröidy from './Rekisteröidy';
-import Kategoria from './Kategoria';
-import Tilaus from './Tilaus';
-
+import Cart from './inc/Cart';
 
 const URL = 'http://localhost/verkkokauppaprojekti-back/';
 
@@ -32,17 +31,17 @@ function App() {
 
   useEffect(()=> {
     if (location.state !== undefined) {
-      if (location.pathname==="/kategoria") {
-        setCategory({trnro: location.state.trnro,trnimi: location.state.trnimi});
+      if (location.pathname==="/") {
+        setCategory({id: location.state.id, name: location.state.name});
       } else if (location.pathname==="/product") {
-        setProduct({trnro: location.state.trnro,trnimi: location.state.trnimi,hinta: location.state.hinta});
+        setProduct({id: location.state.id, name: location.state.name, price: location.state.price});
       }
     }
   },[location.state]) 
   
   function addToCart(product) {
     if (cart.some(item => item.id === product.id)) {
-      const existingProduct = cart.filter(item => item.trnro === product.trnro);
+      const existingProduct = cart.filter(item => item.id === product.id);
       updateAmount(parseInt(existingProduct[0].amount) + 1,product);
     } else {
     product["amount"] = 1;
@@ -54,49 +53,47 @@ function App() {
 
   function updateAmount(amount,product) {
     product.amount = amount;
-    const index = cart.findIndex((item => item.trnro === product.trnro));
+    const index = cart.findIndex((item => item.id === product.id));
     const modifiedCart = Object.assign([...cart],{[index]:product});
     setCart(modifiedCart);
     localStorage.setItem('cart',JSON.stringify(modifiedCart));
+  }
+  function removefromCart (product) {
+    const itemsNotRemoved = cart.filter(item => item.id !== product.id);
+    setCart(itemsNotRemoved);
+    localStorage.setItem('cart',JSON.stringify(itemsNotRemoved));
   }
   return (
     <>
     <NavBar url={URL} setCategory={setCategory} cart={cart}/>
     <div id="content" className="container-fluid">
       <Switch>
-      
       <Route 
-        path="/" 
-        render={() =>
-          <Home
-            url={URL}
-          />
-        } 
-        exact />
-        <Route 
-        path="/kategoria" 
-        render={() =>
-          <Kategoria
+      path="/" 
+      render={() =>  
+        <Home 
             url={URL}
             category={category}
           />
         } 
         exact />
         <Route
-          path="/tuote"
-          render={() =>
-            <Tuote
-              url={URL}
-              product={product}
-              addToCart={addToCart}
-            />
-          }
+            path="/product"
+            render={() => 
+              <Product
+                url={URL}
+                product={product}
+                addToCart={addToCart}
+              />
+            }
           />
-           <Route path="/tilaus"
+           <Route 
+           path="/order"
              render = {() =>
-              <Tilaus
+              <Order
               cart={cart}
               updateAmount={updateAmount}
+              removefromCart={removefromCart}
               />
           }
           />
@@ -109,7 +106,7 @@ function App() {
     </div>
     <Footer />
     </>
-  );
+  )
 }
 
 export default App;
