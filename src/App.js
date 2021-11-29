@@ -11,7 +11,7 @@ import Admin from './Admin';
 import Admincat from './Admincat';
 import Adminprod from './Adminprod';
 import Rekisteröidy from './Rekisteröidy';
-import Cart from './inc/Cart';
+
 
 const URL = 'http://localhost/verkkokauppaprojekti-back/';
 
@@ -72,6 +72,7 @@ function App() {
       path="/" 
       render={() =>  
         <Home 
+            path={}
             url={URL}
             category={category}
           />
