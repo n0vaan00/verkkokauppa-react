@@ -1,8 +1,6 @@
 import React from "react";
 
 export default function Product({product,addToCart,url}) {
-
-
     
     return (
         
