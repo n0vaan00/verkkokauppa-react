@@ -2,6 +2,9 @@ import React,{useState,useEffect} from 'react'
 import axios from 'axios';
 import {Link} from "react-router-dom";
 import './Category.css';
+import Button from 'react-bootstrap/Button';
+import { Card } from 'react-bootstrap';
+import Cart from './inc/Cart';
 
 
 
@@ -26,13 +29,12 @@ export default function Category({url,category,addToCart}) {
   }, [category])
         return (
             <>
-            <h3 style={{'paddingTop': '100px'}}>Tuotteet ryhmästä: {category?.name}</h3>
+            <h3 style={{'paddingTop': '100px'}}>{category?.name}</h3>
               
-            <div style={{'display': 'inline-block'}}>
+            <div className="asd" style={{'display': 'inline-block'}}>
               
-          
               {products.map(product => (
-                <div key={product.id}>
+                <div className="Card" key={product.id}>
                   <Link to={{
                     pathname: '/product',
                     state: {
@@ -42,12 +44,17 @@ export default function Category({url,category,addToCart}) {
                     }
                   }}
                   >
-
-                  <p>{product.name} {product.price}€</p>
-                  <img id="productpic" src={url + 'images/' + product.image} alt={product.name}/>
-                  
+                    <Card style={{ width: '18rem' }}>
+                      <Card.Img variant="top" src={url + 'images/' + product.image} alt={product.name} />
+                      <Card.Body>
+                        <Card.Title>{product.name}</Card.Title>
+                        <Card.Text>
+                        {product.info}
+                        </Card.Text> 
+                        <Button variant="primary"></Button>
+                      </Card.Body>
+                    </Card>
                   </Link>
-                  <figcaption>{product.info}</figcaption>
                   </div>
               ))}
             </div>
