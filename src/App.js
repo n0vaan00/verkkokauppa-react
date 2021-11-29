@@ -1,10 +1,10 @@
 import './App.css';
 import React,{useState,useEffect} from 'react';
 import NavBar from './Navbar';
-import Footer from './Footer';
-import {Switch, Route, useLocation } from "react-router-dom";
-import Kirjaudu from './Kirjaudu';
 import Home from './Home';
+import Footer from './Footer';
+import {Switch, Route, useLocation } from "react-router";
+import Kirjaudu from './Kirjaudu';
 import Admin from './Admin';
 import Admincat from './Admincat';
 import Adminprod from './Adminprod';
@@ -64,7 +64,15 @@ function App() {
     <NavBar url={URL} setCategory={setCategory} cart={cart}/>
     <div id="content" className="container-fluid">
       <Switch>
-      <Route path="/home" component={Home} />
+      
+      <Route 
+        path="/" 
+        render={() =>
+          <Home
+            url={URL}
+          />
+        } 
+        exact />
         <Route 
         path="/kategoria" 
         render={() =>
