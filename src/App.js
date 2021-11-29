@@ -11,7 +11,8 @@ import Admin from './Admin';
 import Admincat from './Admincat';
 import Adminprod from './Adminprod';
 import Rekisteröidy from './Rekisteröidy';
-import Cart from './inc/Cart';
+import Category from './Category';
+
 
 const URL = 'http://localhost/verkkokauppaprojekti-back/';
 
@@ -31,7 +32,7 @@ function App() {
 
   useEffect(()=> {
     if (location.state !== undefined) {
-      if (location.pathname==="/") {
+      if (location.pathname==="/category") {
         setCategory({id: location.state.id, name: location.state.name});
       } else if (location.pathname==="/product") {
         setProduct({id: location.state.id, name: location.state.name, price: location.state.price});
@@ -69,14 +70,22 @@ function App() {
     <div id="content" className="container-fluid">
       <Switch>
       <Route 
-      path="/" 
+        path="/" 
+        render={() =>
+          <Home
+            url={URL}
+          />
+        } 
+        exact />
+      <Route 
+      path="/category" 
       render={() =>  
-        <Home 
+        <Category 
             url={URL}
             category={category}
           />
         } 
-        exact />
+        />
         <Route
             path="/product"
             render={() => 
