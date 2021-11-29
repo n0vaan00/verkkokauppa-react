@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import React from 'react'
+
+
+export default function Home() {
+    return (
+        <div>
+            <p>perkel</p>
+        </div>
+    )
+}
+=======
 import React,{useState,useEffect} from 'react'
 import axios from 'axios';
 import {Link} from "react-router-dom";
@@ -55,3 +67,4 @@ export default function Kategoria({url,category,addToCart}) {
             </>
           );
 }
+>>>>>>> 9aa4679e56e0d46d99e18712103134b7dd3a0147
