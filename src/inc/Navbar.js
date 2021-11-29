@@ -15,7 +15,6 @@ export default function NavBar({url,setCategory,cart}) {
     axios.get(url + 'products/getcategories.php')
     .then ((response) => {
       const json = response.data;
-      console.log();
       setCategories(json);
       setCategory(json[0]);
     }).catch (error => {
@@ -46,7 +45,7 @@ export default function NavBar({url,setCategory,cart}) {
                   <li key={category.id}>
                     <Link className="dropdown-item"
                       to={{
-                        pathname: '/',
+                        pathname: '/category',
                         state: {
                           id: category.id,
                           name: category.name,

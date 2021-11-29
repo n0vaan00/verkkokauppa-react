@@ -1,0 +1,64 @@
+import React,{useState,useEffect} from 'react'
+import axios from 'axios';
+import {Link} from "react-router-dom";
+import './Category.css';
+import Button from 'react-bootstrap/Button';
+import { Card } from 'react-bootstrap';
+import Cart from './inc/Cart';
+
+
+
+export default function Category({url,category,addToCart}) {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    if (category !== null){
+    axios.get(url + 'products/getproducts.php/' + category?.id)
+    .then((response) => {
+      const json = response.data;
+      setProducts(json);
+      console.log(category.id);
+    }).catch (error => {
+      if (error.response === undefined) {
+        alert(error);
+      } else {
+        alert(error.response.data.error);
+      }
+    })
+  }
+  }, [category])
+        return (
+            <>
+            <h3 style={{'paddingTop': '100px'}}>{category?.name}</h3>
+              
+            <div className="asd" style={{'display': 'inline-block'}}>
+              
+              {products.map(product => (
+                <div className="Card" key={product.id}>
+                  <Link to={{
+                    pathname: '/product',
+                    state: {
+                      id: product.id,
+                      name: product.name,
+                      price: product.price
+                    }
+                  }}
+                  >
+                    <Card style={{ width: '18rem' }}>
+                      <Card.Img variant="top" src={url + 'images/' + product.image} alt={product.name} />
+                      <Card.Body>
+                        <Card.Title>{product.name}</Card.Title>
+                        <Card.Text>
+                        {product.info}
+                        </Card.Text> 
+                        <Button variant="primary"></Button>
+                      </Card.Body>
+                    </Card>
+                  </Link>
+                  </div>
+              ))}
+            </div>
+              
+            </>
+          );
+}

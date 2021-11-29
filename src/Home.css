@@ -1,5 +1,10 @@
-img {
-    max-width: 15em;
+#karuselli {
+    padding-top: 10px;
+}
+
+.carousel-item {
+    width: 100em;
+    height: 30em;
 }
 
 

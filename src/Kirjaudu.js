@@ -7,7 +7,7 @@ export default function Kirjaudu() {
 
   
     return (
-      <main style={{'padding-top': '100px'}}>
+      <main>
         <h2>Kirjaudu sisään</h2>
 
         <form method="post" action="login.php">
@@ -27,7 +27,7 @@ export default function Kirjaudu() {
   		Etkö ole vielä rekisteröitynyt? <a href="rekisteröidy">Rekisteröidy tästä.</a>
   	</p>
   </form>
-            <div style={{'paddingTop': '100px'}}></div>
+            <div></div>
               <nav>
                 <Link to="/admin">Admin</Link>
               </nav>
