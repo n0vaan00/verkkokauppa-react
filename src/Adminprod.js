@@ -7,25 +7,25 @@ import { Link } from 'react-router-dom';
 
 export default function Adminprod() {
 
-    const [tuotteet, setTuotteet] = useState([]);
-    const [tuotenimi, setTuotenimi] = useState('');
-    const [hinta, setHinta] = useState('');
-    const [trnro, setTrnro] = useState('');
+    const [product, setProduct] = useState([]);
+    const [name, setName] = useState('');
+    const [price, setPrice] = useState('');
+    const [cat_id, setCatId] = useState('');
 
 /*Tuotteiden lisäys ja poisto*/
       function saveprod(e) {
         e.preventDefault();
-        const json = JSON.stringify({tuotenimi:tuotenimi, hinta:hinta, trnro:trnro})
+        const json = JSON.stringify({name:name, price:price, category_id:cat_id})
         axios.post(URL + 'saveproduct.php',json,{
           headers: {
             'Content-Type' : 'application/json'
           }
         })
         .then((response) => {
-          setTuotteet(tuotteet => [...tuotteet,response.data]);
-          setTuotenimi('');
-          setHinta('');
-          setTrnro('');
+          setProduct(product => [...product,response.data]);
+          setName('');
+          setPrice('');
+          setCatId('');
         }).catch (error => {
             if(error.response === undefined) {
               alert(error);
@@ -35,16 +35,16 @@ export default function Adminprod() {
           });
       }
        
-      function removeprod(tuotenro) {
-        const json = JSON.stringify({tuotenro:tuotenro})
+      function removeprod(id) {
+        const json = JSON.stringify({id:id})
         axios.post(URL + 'deleteproduct.php', json, {
           headers: {
             'Content-Type' : 'application/json'
           }
         })
           .then((response) => {
-            const newListWithoutRemoved = tuotteet.filter((item) => item.tuotenro !== tuotenro);
-            setTuotteet(newListWithoutRemoved);
+            const newListWithoutRemoved = product.filter((item) => item.id !== cat_id);
+            setProduct(newListWithoutRemoved);
           }).catch (error => {
             alert(error.response ? error.response.data.error : error);
           });
@@ -52,7 +52,7 @@ export default function Adminprod() {
     useEffect(() => {
             axios.get(URL+SHOWPRODU)
               .then((response) => {
-                setTuotteet(response.data);
+                setProduct(response.data);
               }).catch(error => {
                 alert(error);
               });
@@ -66,18 +66,18 @@ export default function Adminprod() {
     <h3>Lisää tuote</h3>
     <form onSubmit={saveprod}>
       <label>Uusi tuote</label>
-      <input value={tuotenimi} onChange={e => setTuotenimi(e.target.value)} placeholder="Uusi tuote"/>
+      <input value={name} onChange={e => setName(e.target.value)} placeholder="Uusi tuote"/>
       <label>Tuotteen hinta</label>
-      <input value={hinta} onChange={e => setHinta(e.target.value)} placeholder="Tuotteen hinta"/>
+      <input value={price} onChange={e => setPrice(e.target.value)} placeholder="Tuotteen hinta"/>
       <label>Tuotteen tuoteryhmänumero</label>
-      <input value={trnro} onChange={e => setTrnro(e.target.value)} placeholder="Tuotteen ryhmänumero"/>
+      <input value={cat_id} onChange={e => setCatId(e.target.value)} placeholder="Tuotteen ryhmänumero"/>
       <button>Tallenna</button>
     </form>
     <ol>
-      {tuotteet?.map(tuotenimi =>(
-        <li key={tuotenimi.tuotenro}>
-         {tuotenimi.tuotenimi},  Hinta: {tuotenimi.hinta},   Ryhmänumero: {tuotenimi.trnro}&nbsp;
-          <a href="#" className="delete" onClick={() => removeprod(tuotenimi.tuotenro)}>
+      {product?.map(productname =>(
+        <li key={productname.id}>
+         {productname.name},  Hinta: {productname.price},   Ryhmänumero: {productname.category_id}&nbsp;
+          <a href="#" className="delete" onClick={() => removeprod(name.id)}>
             Delete
           </a>
         </li>

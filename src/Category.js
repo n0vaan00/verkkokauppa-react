@@ -44,7 +44,7 @@ export default function Category({url,category,addToCart}) {
                   >
 
                   <p>{product.name} {product.price}€</p>
-                  <img src={url + 'images/' + product.image} alt={product.name}/>
+                  <img id="productpic" src={url + 'images/' + product.image} alt={product.name}/>
                   
                   </Link>
                   <figcaption>{product.info}</figcaption>
