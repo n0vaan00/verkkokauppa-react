@@ -11,7 +11,10 @@ import Admin from './Admin';
 import Admincat from './Admincat';
 import Adminprod from './Adminprod';
 import Rekisteröidy from './Rekisteröidy';
+<<<<<<< HEAD
 import Category from './Category';
+=======
+>>>>>>> 0e0f09ce9f2892be9bd8622b1bb0008c69d50e4a
 
 
 const URL = 'http://localhost/verkkokauppaprojekti-back/';
@@ -80,7 +83,12 @@ function App() {
       <Route 
       path="/category" 
       render={() =>  
+<<<<<<< HEAD
         <Category 
+=======
+        <Home 
+            path={}
+>>>>>>> 0e0f09ce9f2892be9bd8622b1bb0008c69d50e4a
             url={URL}
             category={category}
           />
