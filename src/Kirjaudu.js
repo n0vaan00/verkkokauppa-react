@@ -7,7 +7,7 @@ export default function Kirjaudu() {
 
   
     return (
-      <main>
+      <main style={{'padding-top': '100px'}}>
         <h2>Kirjaudu sisään</h2>
 
         <form method="post" action="login.php">

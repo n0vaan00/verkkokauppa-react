@@ -1,6 +1,12 @@
-.navbar {
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  .navbar {
     background-image: url("img/banner.jpg");
-    height: 8em;
+    height: 5em;
 }
 
 li {
@@ -17,12 +23,10 @@ li {
     border-radius: 10px;
 }
 
-img {
-    width: 3em;
-}
 
-a {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:rgb(122, 36, 122)
-}
+
+
+
+
+
 
