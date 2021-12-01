@@ -7,7 +7,7 @@ export default function Order({cart,updateAmount,removefromCart}) {
         updateAmount(e.target.value,product);
     }
     return (
-        <div style={{'padding-top': '100px'}}>
+        <div>
             <h3>Ostoskori</h3>
            <table>
             { cart.map((product) => {

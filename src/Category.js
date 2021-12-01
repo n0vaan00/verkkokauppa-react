@@ -29,9 +29,9 @@ export default function Category({url,category,addToCart}) {
   }, [category])
         return (
             <>
-            <h3 style={{'paddingTop': '100px'}}>{category?.name}</h3>
+            <h3>{category?.name}</h3>
               
-            <div className="asd" style={{'display': 'inline-block'}}>
+            <div style={{'display': 'inline-block'}}>
               
               {products.map(product => (
                 <div className="Card" key={product.id}>
@@ -49,7 +49,7 @@ export default function Category({url,category,addToCart}) {
                       <Card.Body>
                         <Card.Title>{product.name}</Card.Title>
                         <Card.Text>
-                        {product.info}
+                        {product.price}
                         </Card.Text> 
                         <Button variant="primary"></Button>
                       </Card.Body>

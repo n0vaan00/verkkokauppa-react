@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Rekisteröidy() {
     return (
-    <div style={{'paddingTop': '100px'}}>
+    <div>
         <h2>Rekisteröidy</h2>
             <form method="post" action="register.php">
                 <div class="input-group">
