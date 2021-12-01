@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-    const URL = 'http://localhost/products';
+    const URL = 'http://localhost/verkkokauppaprojekti-back/products/';
     const SHOW = 'getcategories.php';
 
 
@@ -70,7 +70,7 @@ export default function Admincat() {
       <ol>
         {tryhma?.map(ryhma =>(
           <li key={ryhma.id}>
-            {ryhma.id}
+            {ryhma.name}&nbsp;
             <a href="#" className="delete" onClick={() => removecat(ryhma.id)}>
               Delete
             </a>
