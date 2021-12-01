@@ -35,7 +35,7 @@ function App() {
       if (location.pathname==="/category") {
         setCategory({id: location.state.id, name: location.state.name});
       } else if (location.pathname==="/product") {
-        setProduct({id: location.state.id, name: location.state.name, price: location.state.price});
+        setProduct({id: location.state.id, name: location.state.name, price: location.state.price, info:location.state.info});
       }
     }
   },[location.state]) 

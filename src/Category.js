@@ -40,7 +40,8 @@ export default function Category({url,category,addToCart}) {
                     state: {
                       id: product.id,
                       name: product.name,
-                      price: product.price
+                      price: product.price,
+                      info: product.info
                     }
                   }}
                   >
