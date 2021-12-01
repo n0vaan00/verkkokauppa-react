@@ -12,6 +12,7 @@ import Admincat from './Admincat';
 import Adminprod from './Adminprod';
 import Rekisteröidy from './Rekisteröidy';
 import Category from './Category';
+import Ale from './Ale';
 
 
 const URL = 'http://localhost/verkkokauppaprojekti-back/';
@@ -106,6 +107,15 @@ function App() {
               />
           }
           />
+          <Route 
+      path="/ale" 
+      render={() =>  
+        <Ale 
+            url={URL}
+            category={category}
+          />
+        } 
+        />
         <Route path="/kirjaudu" component={Kirjaudu} />
         <Route path="/rekisteröidy" component={Rekisteröidy} />
         <Route path="/admin" component={Admin} />

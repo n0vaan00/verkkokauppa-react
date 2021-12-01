@@ -50,7 +50,6 @@ export default function Admincat() {
         axios.get(URL+SHOW)
           .then((response) => {
             setTryhma(response.data);
-            console.log(response);
           }).catch(error => {
             alert(error);
           });
