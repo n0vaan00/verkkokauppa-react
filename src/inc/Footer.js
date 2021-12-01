@@ -3,8 +3,8 @@ import './Footer.css';
 
 export default function Footer() {
     return (
-        <div></div>
-      /*      <footer class="row" className="footer">
+        <div>
+            <footer class="row" className="footer">
                 <div class="col-12">
                
                 <div class="col-4" id="footer1">
@@ -21,6 +21,7 @@ export default function Footer() {
                 <p>Jaako Taskila</p>
                 </div>
                 </div>
-    </footer>  */
+            </footer>  
+        </div>
     )
 }

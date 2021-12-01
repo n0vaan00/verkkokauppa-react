@@ -1,5 +1,11 @@
-img {
+#productpic {
     max-width: 15em;
+}
+.Card {
+    display: inline-block;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 
