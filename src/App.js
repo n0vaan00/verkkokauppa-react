@@ -12,6 +12,7 @@ import Admincat from './Admincat';
 import Adminprod from './Adminprod';
 import Rekisteröidy from './Rekisteröidy';
 import Category from './Category';
+import Ale from './Ale';
 
 
 const URL = 'http://localhost/verkkokauppaprojekti-back/';
@@ -35,7 +36,7 @@ function App() {
       if (location.pathname==="/category") {
         setCategory({id: location.state.id, name: location.state.name});
       } else if (location.pathname==="/product") {
-        setProduct({id: location.state.id, name: location.state.name, price: location.state.price});
+        setProduct({id: location.state.id, name: location.state.name, price: location.state.price, info:location.state.info});
       }
     }
   },[location.state]) 
@@ -106,6 +107,15 @@ function App() {
               />
           }
           />
+          <Route 
+      path="/ale" 
+      render={() =>  
+        <Ale 
+            url={URL}
+            category={category}
+          />
+        } 
+        />
         <Route path="/kirjaudu" component={Kirjaudu} />
         <Route path="/rekisteröidy" component={Rekisteröidy} />
         <Route path="/admin" component={Admin} />
