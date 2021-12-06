@@ -23,7 +23,7 @@ export default function Home() {
                     <img
                     id="mainos"
                     className="d-block"
-                    src="mainos2.jpg"
+                    src="mainos4.jpg"
                     alt="Second slide"
                     />
                     <Carousel.Caption>
