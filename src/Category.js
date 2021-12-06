@@ -41,7 +41,8 @@ export default function Category({url,category,addToCart}) {
                       id: product.id,
                       name: product.name,
                       price: product.price,
-                      info: product.info
+                      info: product.info,
+                      image: product.image
                     }
                   }}
                   >
