@@ -15,33 +15,33 @@ export default function Home() {
                     alt="First slide"
                     />
                     <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3>Kato kato karvamato</h3>
+                    <Link className="nav-link" aria-current="page" to="/ale">T-PAETOJA!</Link>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                     id="mainos"
                     className="d-block"
-                    src="mainoss1.jpg"
+                    src="mainos2.jpg"
                     alt="Second slide"
                     />
                     <Carousel.Caption>
                     <h3>MukaMegaALE</h3>
-                    <Link className="nav-link" aria-current="page" to="/category">Katoppa tonne!!</Link>
+                    <Link className="nav-link" aria-current="page" to="/ale">Katoppa tonne!!</Link>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                     id="mainos"
                     className="d-block"
-                    src="banner.jpg"
+                    src="mainos3.jpg"
                     alt="Third slide"
                     />
 
                     <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    <h3>Tästäki johki</h3>
+                    <Link className="nav-link" aria-current="page" to="/ale">O se mahtava!!</Link>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
