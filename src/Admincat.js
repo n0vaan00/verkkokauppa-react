@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import './Kirjaudu.css';
 
     const URL = 'http://localhost/verkkokauppaprojekti-back/products/';
     const SHOW = 'getcategories.php';
@@ -57,7 +58,7 @@ export default function Admincat() {
 
       
     return (
-    <div className="container">
+    <div className="container" id="main">
         <Link className="nav-link" aria-current="page" to="/adminprod">Hallinnoi tuotteita</Link>
 
         <h3>Lisää tuoteryhmä</h3>
@@ -68,8 +69,8 @@ export default function Admincat() {
             </form>
       <ol>
         {tryhma?.map(ryhma =>(
-          <li key={ryhma.id}>
-            {ryhma.name}&nbsp;
+          <li key={ryhma.id} id="adminlista">
+            {ryhma.id}. {ryhma.name}&nbsp;
             <a href="#" className="delete" onClick={() => removecat(ryhma.id)}>
               Delete
             </a>

@@ -1,8 +1,9 @@
 import React from 'react'
+import './Rekisteröidy.css';
 
 export default function Rekisteröidy() {
     return (
-    <div>
+    <div id="main">
         <h2>Rekisteröidy</h2>
             <form method="post" action="register.php">
                 <div class="input-group">
@@ -29,15 +30,15 @@ export default function Rekisteröidy() {
                     <label>Puhelinnumero</label>
                     <input type="text" name="puhnum"></input>
                 </div>
-
-                <div class="input-group">
-                    <label>Käyttäjänimi</label>
-                    <input type="text" name="username"></input>
-                </div>
                 <div class="input-group">
                     <label>Sähköposti</label>
                     <input type="email" name="email"></input>
                 </div>
+                <div class="input-group">
+                    <label>Käyttäjänimi</label>
+                    <input type="text" name="username"></input>
+                </div>
+                
                 <div class="input-group">
                     <label>Salasana</label>
                     <input type="password" name="password_1"></input>

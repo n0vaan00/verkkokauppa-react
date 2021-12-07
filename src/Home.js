@@ -8,7 +8,7 @@ import { Card, Button } from 'react-bootstrap';
 import './Category.css';
 
 
-export default function Home({url,category,addToCart}) {
+export default function Home({url}) {
     const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -90,9 +90,7 @@ export default function Home({url,category,addToCart}) {
                         <Card.Title>{product.name}</Card.Title>
                         <Card.Text>
                         {product.price}
-                        </Card.Text> 
-                        <Button>Lisätietoja</Button>
-                        
+                        </Card.Text>                        
                       </Card.Body>
                     </Card>
                   </Link>

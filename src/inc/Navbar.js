@@ -40,7 +40,7 @@ export default function NavBar({url,setCategory,cart}) {
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Tuotteet</a>
-              <ul className="dropdown-menu" aria-labelledby="dropdown01">
+              <ul className="dropdown-menu" aria-labelledby="dropdown01" id="linkkirivi2">
                 {categories.map(category => (
                   <li key={category.id}>
                     <Link className="dropdown-item"
