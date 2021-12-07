@@ -1,0 +1,9 @@
+#content {
+    background-image: url("inc/img/banner.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: auto;
+    position: auto;
+}
+
