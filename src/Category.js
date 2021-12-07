@@ -41,18 +41,20 @@ export default function Category({url,category,addToCart}) {
                       id: product.id,
                       name: product.name,
                       price: product.price,
-                      info: product.info
+                      info: product.info,
+                      image: product.image
                     }
                   }}
                   >
                     <Card style={{ width: '18rem' }}>
-                      <Card.Img variant="top" src={url + 'images/' + product.image} alt={product.name} />
+                      <Card.Img variant="top" src={url + 'images/' + product.image} alt={product.name} style={{height:'20rem'}} />
                       <Card.Body>
                         <Card.Title>{product.name}</Card.Title>
                         <Card.Text>
                         {product.price}
                         </Card.Text> 
-                        <Button variant="primary"></Button>
+                        <Button>Lisätietoja</Button>
+                        
                       </Card.Body>
                     </Card>
                   </Link>
