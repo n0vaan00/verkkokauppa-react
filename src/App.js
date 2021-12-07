@@ -65,6 +65,12 @@ function App() {
     setCart(itemsNotRemoved);
     localStorage.setItem('cart',JSON.stringify(itemsNotRemoved));
   }
+
+  function emptyCart() {
+    setCart([]);
+    localStorage.removeItem('cart')
+  }
+
   return (
     <>
     <NavBar url={URL} setCategory={setCategory} cart={cart}/>
@@ -104,6 +110,8 @@ function App() {
               cart={cart}
               updateAmount={updateAmount}
               removefromCart={removefromCart}
+              empty={emptyCart}
+              url={URL}
               />
           }
           />
