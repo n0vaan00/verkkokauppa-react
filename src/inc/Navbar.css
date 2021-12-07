@@ -24,9 +24,14 @@ li {
     border-radius: 10px;
 }
 
+.nav-item {
+    background-color:#858081a2;
+    color: black;
+}
 
-
-
+#linkkirivi2 {
+    background-color:#d8d3d3;
+}
 
 
 
