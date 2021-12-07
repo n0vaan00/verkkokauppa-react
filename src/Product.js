@@ -7,7 +7,7 @@ export default function Product({product,addToCart,url}) {
         
         <div id="tuotesivu">
             <div>
-                <img id="kuva" src={url + 'images/' + product.image} alt={product.name}/>
+                <img id="kuva" src={url + 'images/' + product?.image} alt={product?.name}/>
             </div>
             <div id="otsikko">
                 <p>{product?.name}</p>
