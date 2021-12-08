@@ -30,6 +30,7 @@ export default function Order({cart,updateAmount,removefromCart,empty,url}) {
         .then((response) => {
             setTasks(tasks => [...tasks,response.data]);
             setTask('');
+            console.log(response.data);
         }).catch (error => {
             alert(error.response.data.error)
         })
@@ -72,7 +73,7 @@ export default function Order({cart,updateAmount,removefromCart,empty,url}) {
                 {cart.length > 0 &&
                     <>
                         <h3 Classname="header">Asiakas tiedot</h3>
-                        <form onSubmit={Order}>
+                        <form onSubmit={order}>
                             <div className="form-group">
                                 <label>Etunimi</label>
                                 <input className="form-control" onChange={e => setFirstname(e.target.value)}></input>
