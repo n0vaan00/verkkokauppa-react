@@ -29,7 +29,7 @@ export default function Order({cart,updateAmount,removefromCart,empty,url}) {
             return res.json();
         })
         .then (
-            (res) => {
+            (emptyCart) => {
                 empty();
                 setFinished(true);
             }, (error) => {

@@ -13,6 +13,7 @@ import Adminprod from './Adminprod';
 import Rekisteröidy from './Rekisteröidy';
 import Category from './Category';
 import Ale from './Ale';
+import Search from './Search'
 
 
 const URL = 'http://localhost/verkkokauppaprojekti-back/';

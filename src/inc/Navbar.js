@@ -62,6 +62,10 @@ export default function NavBar({url,setCategory,cart}) {
                   <Link className="nav-link" aria-current="page" to="/kirjaudu">Kirjaudu</Link>
                 </li>
           </ul>
+          <div className="search">
+            <button>Haku</button>
+            <input type="text"></input>
+          </div>
           <ul className="navbar-nav ml-auto">
             <li  className="nav-item">
               <Cart cart={cart}/>
