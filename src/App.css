@@ -1,5 +1,6 @@
 #content {
-    background-image: url("inc/img/banner.jpg");
+    background-image: url("inc/img/tausta.jpg");
+    background-color: #444444;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;

@@ -1,8 +1,9 @@
 .footer {
-    background-color: #EDEDED;
+    background-image: url("img/Footer.jpg");
     font-size: small;
     position:absolute;
     width: 100%;
+    color: beige;
 }
 
 #footer1{

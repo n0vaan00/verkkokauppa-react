@@ -5,9 +5,10 @@
     left: 0;
   }
   .navbar {
-    background-image: url("img/banner.jpg");
+    background-image: url("img/Header.jpg");
     height: 5em;
     position:relative;
+    
 }
 
 li {
