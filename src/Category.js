@@ -29,7 +29,7 @@ export default function Category({url,category,addToCart}) {
   }, [category])
         return (
             <>
-            <h3>{category?.name}</h3>
+            <h3 style={{'color': 'white'}}>{category?.name}</h3>
               
             <div style={{'display': 'inline-block'}}>
               
@@ -53,7 +53,7 @@ export default function Category({url,category,addToCart}) {
                         <Card.Text>
                         {product.price}
                         </Card.Text> 
-                        <Button>Lisätietoja</Button>
+                        <Button style={{'background-color': '#DA0037'}}>Lisätietoja</Button>
                         
                       </Card.Body>
                     </Card>

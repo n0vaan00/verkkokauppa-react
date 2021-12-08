@@ -9,29 +9,31 @@ export default function Kirjaudu() {
   
     return (
       <main>
-        <h2>Kirjaudu sisään</h2>
+		  <div id="login">
+        <h2 style={{'color':'#bdc0bf98'}}>Kirjaudu sisään</h2>
 
         <form method="post" action="login.php">
   	
   	<div class="input-group">
-  		<label>Käyttäjänimi</label>
+  		<label style={{'color':'white'}}>Käyttäjänimi</label>
   		<input type="text" name="username" ></input>
   	</div>
   	<div class="input-group">
-  		<label>Salasana</label>
+  		<label style={{'color':'white'}}>Salasana</label>
   		<input type="password" name="password"></input>
   	</div>
   	<div class="input-group">
-  		<button type="submit" class="btn" name="login_user">Login</button>
+  		<button style={{'color':'white'}} type="submit" class="btn" name="login_user">Kirjauvvu sissää</button>
   	</div>
-  	<p>
-  		Etkö ole vielä rekisteröitynyt? <a href="rekisteröidy">Rekisteröidy tästä.</a>
+  	<p style={{'color':'white'}}>
+  		Etkö ole vielä rekisteröitynyt? <a href="rekisteröidy" style={{'color':'white'}}>Rekisteröidy tästä.</a>
   	</p>
   </form>
             <div></div>
               <nav>
                 <Link to="/admin">Admin</Link>
               </nav>
+		</div>
       </main>
     );
 }

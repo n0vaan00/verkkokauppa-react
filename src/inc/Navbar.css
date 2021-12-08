@@ -6,33 +6,12 @@
   }
   .navbar {
     background-image: url("img/Header.jpg");
-    height: 5em;
+    height: 8em;
+    padding-left: 4em;
+    padding-right: 4em;
     position:relative;
-    
 }
 
-li {
-    color: black;
-}
-
-.logonav {
-    width: 50px;
-}
-
-.nav_linkit {
-    background-color: rgba(245, 245, 239, 0.582);
-    font-size: large; 
-    border-radius: 10px;
-}
-
-.nav-item {
-    background-color:#858081a2;
-    color: black;
-}
-
-#linkkirivi2 {
-    background-color:#d8d3d3;
-}
 
 
 
