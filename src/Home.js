@@ -37,7 +37,7 @@ export default function Home({url}) {
                     />
                     <Carousel.Caption>
                     <h3>Kato kato karvamato</h3>
-                    <Link className="nav-link" aria-current="page" to="/ale">T-PAETOJA!</Link>
+                    <Link style={{'color':'white'}} className="nav-link" aria-current="page" to="/ale">T-PAETOJA!</Link>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -49,7 +49,7 @@ export default function Home({url}) {
                     />
                     <Carousel.Caption>
                     <h3>MukaMegaALE</h3>
-                    <Link className="nav-link" aria-current="page" to="/ale">Katoppa tonne!!</Link>
+                    <Link style={{'color':'white'}} className="nav-link" aria-current="page" to="/ale">Katoppa tonne!!</Link>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -62,13 +62,13 @@ export default function Home({url}) {
 
                     <Carousel.Caption>
                     <h3>Tästäki johki</h3>
-                    <Link className="nav-link" aria-current="page" to="/ale">O se mahtava!!</Link>
+                    <Link style={{'color':'white'}} className="nav-link" aria-current="page" to="/ale">O se mahtava!!</Link>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
         </div>
         <div id="tarjoukset">
-        <h3>Huiman halapoja</h3>
+        <h3 style={{'color':'white'}}>Huiman halapoja</h3>
         <div style={{'display': 'inline-block'}}>
               
               {products.map(product => (
@@ -84,7 +84,7 @@ export default function Home({url}) {
                     }
                   }}
                   >
-                    <Card style={{ width: '18rem' }}>
+                    <Card style={{width: '18rem'}}>
                       <Card.Img variant="top" src={url + 'images/' + product.image} alt={product.name} style={{height:'20rem'}} />
                       <Card.Body>
                         <Card.Title>{product.name}</Card.Title>

@@ -1,6 +1,8 @@
 main {
     margin: auto;
-    width: 50%;
+    width: 20%;
+    padding-top: 15%;
+    padding-bottom: 15%
 }
 
 label {
@@ -17,4 +19,9 @@ label {
 
 #katlist {
     text-align: right;
+}
+
+#login {
+    background-color: #253a35a2;
+    padding: 2em;
 }
