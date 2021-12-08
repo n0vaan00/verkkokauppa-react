@@ -75,35 +75,32 @@ export default function Adminprod() {
           }, []) 
 
     return (
+        <div className="container" id="main">
+          <Link style={{'color':'white','fontSize':'20px'}} className="nav-link" aria-current="page" to="/admincat">Hallinnoi tuoteryhmiä</Link>
 
-    <div className="container" id="main">
-    <Link className="nav-link" aria-current="page" to="/admincat">Hallinnoi tuoteryhmiä</Link>
-
-    <h3>Lisää tuote</h3>
-    <form onSubmit={saveprod}>
-      <label>Uusi tuote</label>
-      <input value={name} onChange={e => setName(e.target.value)} placeholder="Uusi tuote"/><br/>
-      <label>Tuotteen hinta</label>
-      <input value={price} onChange={e => setPrice(e.target.value)} placeholder="Tuotteen hinta"/><br/>
-      <label>Tuotteen kuva</label>
-      <input value={image} onChange={e => setImage(e.target.value)} placeholder="Tuotteen kuva"/><br/>
-      <label>Tuotteen tiedot</label>
-      <input value={info} onChange={e => setInfo(e.target.value)} placeholder="Tuotteen tiedot"/><br/>
-      <label>Tuotteen tuoteryhmänumero</label>
-      <input value={cat_id} onChange={e => setCatId(e.target.value)} placeholder="Tuotteen ryhmänumero"/><br/>
-      <button>Tallenna</button>
-    </form>
-    <ol>
-      {product?.map(productname =>(
-        <li key={productname.id} id="adminlista">
-         {productname.id}. {productname.name},  Hinta: {productname.price}, Kuva: {productname.image}, Tiedot: {productname.info},   Ryhmänumero: {productname.category_id}&nbsp;
-          <a href="#" className="delete" onClick={() => removeprod(productname.id)}>
-            Delete
-          </a>
-        </li>
-      ))}
-    </ol>
-    <br/>
+          <h3>Lisää tuote</h3>
+            <form onSubmit={saveprod}>
+              <label>Uusi tuote</label>
+                <input value={name} onChange={e => setName(e.target.value)} placeholder="Uusi tuote"/><br/>
+              <label>Tuotteen hinta</label>
+                <input value={price} onChange={e => setPrice(e.target.value)} placeholder="Tuotteen hinta"/><br/>
+              <label>Tuotteen kuva</label>
+                <input value={image} onChange={e => setImage(e.target.value)} placeholder="Tuotteen kuva"/><br/>
+              <label>Tuotteen tiedot</label>
+                <input value={info} onChange={e => setInfo(e.target.value)} placeholder="Tuotteen tiedot"/><br/>
+              <label>Tuotteen tuoteryhmänumero</label>
+                <input value={cat_id} onChange={e => setCatId(e.target.value)} placeholder="Tuotteen ryhmänumero"/><br/>
+              <button>Tallenna</button>
+            </form>
+          <ol>
+              {product?.map(productname =>(
+                <li key={productname.id} id="adminlista">
+                  {productname.id}. {productname.name},  Hinta: {productname.price}, Kuva: {productname.image}, Tiedot: {productname.info},   Ryhmänumero: {productname.category_id}&nbsp;
+                  <a href="#" className="delete" onClick={() => removeprod(productname.id)}>Poista</a>
+                </li>
+              ))}
+          </ol>
+          <br/>
     <div id="katlist">
       <h4>Kategoriat</h4>
     <ol>
@@ -115,6 +112,5 @@ export default function Adminprod() {
       </ol>
     </div>
     </div>
-
     )
 }

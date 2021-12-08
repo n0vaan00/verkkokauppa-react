@@ -21,7 +21,16 @@ label {
     text-align: right;
 }
 
-#login {
+#boksi {
     background-color: #253a35a2;
     padding: 2em;
+}
+
+h2, h3, label, li, a, h4, p {
+    color:white;
+}
+
+#main {
+    padding-top: 10%;
+    padding-bottom: 10%;
 }

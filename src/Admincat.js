@@ -59,7 +59,7 @@ export default function Admincat() {
       
     return (
     <div className="container" id="main">
-        <Link className="nav-link" aria-current="page" to="/adminprod">Hallinnoi tuotteita</Link>
+        <Link style={{'color':'white','fontSize':'20px'}} className="nav-link" aria-current="page" to="/adminprod">Hallinnoi tuotteita</Link>
 
         <h3>Lisää tuoteryhmä</h3>
             <form onSubmit={savecat}>

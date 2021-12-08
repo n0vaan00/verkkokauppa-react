@@ -6,9 +6,11 @@ export default function Admin() {
 
   
     return (
-    <div className="container" id="main">
-        <Link className="nav-link" aria-current="page" to="/admincat">Hallinnoi tuoteryhmiä</Link>
-        <Link className="nav-link" aria-current="page" to="/adminprod">Hallinnoi tuotteita</Link>
+        <main>
+    <div className="container" id="boksi">
+        <Link style={{'color':'white','fontSize':'20px'}} className="nav-link" aria-current="page" to="/admincat">Hallinnoi tuoteryhmiä</Link>
+        <Link style={{'color':'white','fontSize':'20px'}} className="nav-link" aria-current="page" to="/adminprod">Hallinnoi tuotteita</Link>
     </div>
+        </main>
     );
 }

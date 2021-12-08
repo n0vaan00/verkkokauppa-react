@@ -48,7 +48,7 @@ export default function Rekisteröidy() {
                     <input type="password" name="password_2"></input>
                 </div>
                 <div class="input-group">
-                    <button type="submit" class="btn" name="reg_user">Rekisteröidy</button>
+                    <button  style={{'color':'white'}}  type="submit" class="btn" name="reg_user">Rekisteröidy</button>
                 </div>
                 <p>
                     Oletko jo rekisteröitynyt? <a href="kirjaudu">Kirjaudu sisään</a>
