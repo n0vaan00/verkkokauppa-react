@@ -11,8 +11,6 @@ export default function Order({cart,updateAmount,removefromCart,empty,url}) {
     const [city,setCity] = useState("");
     const [phone,setPhone] = useState("");
     const [finished,setFinished] = useState(false);
-    const [task,setTask] = useState("");
-    const [tasks,setTasks] = useState("");
 
     function changeAmount(e,product) {
         updateAmount(e.target.value,product);
@@ -27,12 +25,17 @@ export default function Order({cart,updateAmount,removefromCart,empty,url}) {
                 'Content-Type': 'application/json'
             }
         })
-        .then((response) => {
-            setTasks(tasks => [...tasks,response.data]);
-            setTask('');
-        }).catch (error => {
-            alert(error.response.data.error)
+        .then (res =>{
+            return res.json();
         })
+        .then (
+            (res) => {
+                empty();
+                setFinished(true);
+            }, (error) => {
+                alert(error)
+            }
+        )
     }
 
     let sum = 0;
@@ -72,7 +75,7 @@ export default function Order({cart,updateAmount,removefromCart,empty,url}) {
                 {cart.length > 0 &&
                     <>
                         <h3 Classname="header">Asiakas tiedot</h3>
-                        <form onSubmit={Order}>
+                        <form onSubmit={order}>
                             <div className="form-group">
                                 <label>Etunimi</label>
                                 <input className="form-control" onChange={e => setFirstname(e.target.value)}></input>
