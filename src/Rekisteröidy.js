@@ -51,7 +51,7 @@ export default function Rekisteröidy() {
                     <button  style={{'color':'white'}}  type="submit" class="btn" name="reg_user">Rekisteröidy</button>
                 </div>
                 <p>
-                    Oletko jo rekisteröitynyt? <a href="kirjaudu">Kirjaudu sisään</a>
+                    Oletko jo rekisteröitynyt? <a href="kirjaudu" style={{'color':'white'}}>Kirjaudu sisään</a>
                 </p>
             </form>
     </div>
