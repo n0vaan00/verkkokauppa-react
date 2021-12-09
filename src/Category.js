@@ -49,7 +49,7 @@ export default function Category({url,category,addToCart}) {
                       <Card.Img variant="top" src={url + 'images/' + product.image} alt={product.name} style={{height:'20rem'}} />
                       <Card.Body>
                         <Card.Title>{product.name}</Card.Title>
-                        <Card.Text>
+                        <Card.Text style={{ 'color' : 'black' }}>
                         {product.price}
                         </Card.Text> 
                         <Button style={{'background-color': '#DA0037'}}>Lisätietoja</Button>
