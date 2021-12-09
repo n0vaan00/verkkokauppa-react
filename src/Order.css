@@ -2,5 +2,21 @@ td {
     border-bottom: 1px solid black;
     width: 75px;
     padding: 2px;
-    
+}
+
+.table {
+    color: white;
+    padding-left: 100px;
+}
+
+.rivi {
+    display: inline-block;
+    padding-right: 300px;
+    padding-bottom: 203px;
+    float: left;
+}
+
+.buttons {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

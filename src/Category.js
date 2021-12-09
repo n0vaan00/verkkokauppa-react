@@ -4,7 +4,6 @@ import {Link} from "react-router-dom";
 import './Category.css';
 import Button from 'react-bootstrap/Button';
 import { Card } from 'react-bootstrap';
-import Cart from './inc/Cart';
 
 
 
@@ -58,7 +57,7 @@ export default function Category({url,category,addToCart}) {
                       </Card.Body>
                     </Card>
                   </Link>
-                  </div>
+                </div>
               ))}
             </div>
               
