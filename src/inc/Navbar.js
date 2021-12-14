@@ -61,6 +61,9 @@ export default function NavBar({url,setCategory,cart}) {
             <li className="nav-item">
                   <Link style={{'color':'white', 'padding-left':'30px','fontSize':'25px'}} className="nav-link" aria-current="page" to="/kirjaudu">Kirjaudu</Link>
                 </li>
+                <li className="nav-item">
+                  <Link style={{'color':'white', 'padding-left':'30px','fontSize':'25px'}} className="nav-link" aria-current="page" to="/infot">Ryhmätiedot</Link>
+                </li>
           </ul>
           <div className="search">
             <button>Haku</button>
