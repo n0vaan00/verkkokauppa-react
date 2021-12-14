@@ -28,7 +28,7 @@ export default function Category({url,category,addToCart}) {
   }, [category])
         return (
             <>
-            <h3 style={{'color': 'white'}}>{category?.name}</h3>
+            <h1 style={{'color': 'white', "padding-top":"20px"}}>{category?.name}</h1>
               
             <div style={{'display': 'inline-block'}}>
               

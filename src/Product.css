@@ -1,22 +1,23 @@
+img {
+    width: 100%;
+    height: 100%;
+}
+
 #kuva {
     max-width: 600px;
     max-height: 600px;
-    padding-top: 10px;
-    border: 2px solid yellow;
-}
-
-#tuotesivu {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-    display: inline-block;
 }
 
 #otsikko {
     font-size: 24pt;
-    border: 2px solid yellow;
 }
 
 #teksti {
-    font-size: 16pt;
-    border: 2px solid yellow;
+    font-size: 24pt;
+}
+
+.container {
+    background-color: #253a35a2;
+    padding: 10px;
+    border-radius: 20px;
 }
