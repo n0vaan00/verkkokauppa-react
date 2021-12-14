@@ -45,7 +45,7 @@ export default function Ale({url}) {
                       <Card.Img variant="top" src={url + 'images/' + product.image} alt={product.name} style={{height:'20rem'}} />
                       <Card.Body>
                         <Card.Title>{product.name}</Card.Title>
-                        <Card.Text>
+                        <Card.Text style={{'color':'black'}}>
                         {product.price}
                         </Card.Text>                        
                       </Card.Body>
