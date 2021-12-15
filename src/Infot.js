@@ -6,7 +6,7 @@ export default function Infot() {
             <div id="atte"></div>
             <div id="anu">
                 <h3>Anu Väyrynen</h3>
-                <h5>Käytetyt tunnit: 56h 15m</h5>
+                <h5>Käytetyt tunnit: 39h 45m</h5>
                 <ul>
                     <li>Miten projekti eteni: Hitaasti, mutta varmasti</li>
                     <li>Mikä onnistui: Töiden suunnittelu ja suurin osa tarvittavista toiminnoista</li>
