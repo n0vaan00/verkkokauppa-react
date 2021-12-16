@@ -17,7 +17,7 @@ export default function Order ({cart, updateAmount, removefromCart, empty, url})
 
   function order (e) {
       
-    e.preventdefault();
+    e.preventDefault();
     fetch(url + 'order/add.php',{
         method: 'POST',
         header: {
