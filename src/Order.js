@@ -1,57 +1,50 @@
-import axios from 'axios'
 import React, { useState } from 'react'
 import './Order.css'
 
-export default function Order ({
-  cart,
-  updateAmount,
-  removefromCart,
-  empty,
-  url
-}) {
-  const [firstname, setFirstname] = useState('')
-  const [lastname, setLastname] = useState('')
-  const [address, setAddress] = useState('')
-  const [zip, setZip] = useState('')
-  const [city, setCity] = useState('')
-  const [phone, setPhone] = useState('')
-  const [finished, setFinished] = useState(false)
+export default function Order ({cart, updateAmount, removefromCart, empty, url}) {
+
+  const [firstname, setFirstname] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [address, setAddress] = useState('');
+  const [zip, setZip] = useState('');
+  const [city, setCity] = useState('');
+  const [phone, setPhone] = useState('');
+  const [finished, setFinished] = useState(false);
 
   function changeAmount (e, product) {
     updateAmount(e.target.value, product)
   }
 
   function order (e) {
-    e.preventdefault()
-    const json = JSON.stringify({
-      description: firstname,
-      description: lastname,
-      description: address,
-      description: zip,
-      description: city,
-      description: phone,
-      description: finished,
-      description: cart
-    })
-    axios
-      .post(URL + 'add.php', json, {
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json'
-        }
-      })
-      .then(res => {
-        return res.json()
-      })
-      .then(
-        emptyCart => {
-          empty()
-          setFinished(true)
+      
+    e.preventdefault();
+    fetch(url + 'order/add.php',{
+        method: 'POST',
+        header: {
+            'Accept' : 'application/json',
+            'Content-Type' : 'application/json',
         },
-        error => {
-          alert(error)
+        body: JSON.stringify({
+            firstname:firstname,
+            lastname: lastname,
+            address: address,
+            zip:zip,
+            city:city,
+            phone:phone,
+            cart:cart,
+        })
+    })
+    .then (res => {
+        return res.json();
+    })
+    .then (
+        (res) => {
+            empty();
+            setFinished(true);
+        }, (error) => {
+            alert(error);
         }
-      )
+    )
   }
 
   let sum = 0
@@ -109,45 +102,27 @@ export default function Order ({
                         <form onSubmit={order}>
                             <div className='form-group'>
                                 <label>Etunimi</label>
-                                <input
-                                    className='form-control'
-                                    onChange={e => setFirstname(e.target.value)}
-                                ></input>
+                                <input className='form-control' onChange={e => setFirstname(e.target.value)}/>
                             </div>
                             <div className='form-group'>
                                 <label>Sukunimi</label>
-                                <input
-                                    className='form-control'
-                                    onChange={e => setLastname(e.target.value)}
-                                ></input>
+                                <input  className='form-control' onChange={e => setLastname(e.target.value)}/>
                             </div>
                             <div className='form-group'>
                                 <label>Osoite</label>
-                                <input
-                                    className='form-control'
-                                    onChange={e => setAddress(e.target.value)}
-                                ></input>
+                                <input className='form-control' onChange={e => setAddress(e.target.value)}/>
                             </div>
                             <div className='form-group'>
                                 <label>Postinumero</label>
-                                <input
-                                    className='form-control'
-                                    onChange={e => setZip(e.target.value)}
-                                ></input>
+                                <input className='form-control' onChange={e => setZip(e.target.value)}/>
                             </div>
                             <div className='form-group'>
                                 <label>Kaupunki</label>
-                                <input
-                                    className='form-control'
-                                    onChange={e => setCity(e.target.value)}
-                                ></input>
+                                <input className='form-control' onChange={e => setCity(e.target.value)} />
                             </div>
                             <div className='form-group'>
                                 <label>Puhelinnumero</label>
-                                <input
-                                    className='form-control'
-                                    onChange={e => setPhone(e.target.value)}
-                                ></input>
+                                <input className='form-control' onChange={e => setPhone(e.target.value)} />
                             </div>
                             <div className='buttons'>
                                 <button className='btn btn-primary'>Tilaa</button>
@@ -159,6 +134,6 @@ export default function Order ({
         </div>
     )
   } else {
-    return <h3 style={{ 'padding-top': '100px' }}>Kiitokset tilauksestasi</h3>
+    return (<h3 style={{ 'padding-top': '200px' }}>Kiitokset tilauksestasi</h3>);
   }
 }
