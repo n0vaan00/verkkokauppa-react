@@ -4,20 +4,37 @@ img {
 }
 
 #kuva {
-    max-width: 600px;
-    max-height: 600px;
-}
-
-#otsikko {
-    font-size: 24pt;
-}
-
-#teksti {
-    font-size: 24pt;
+    max-width: 100%;
+    max-height: 100%
 }
 
 .container {
     background-color: #253a35a2;
     padding: 10px;
     border-radius: 20px;
+}
+
+.info {
+    font-size: 25px;
+    padding-top: 40px;
+    color: white;
+    padding-left: 50px;
+}
+
+.nimi {
+    color: white;
+    font-size: 35px;
+    padding-left: 30px;
+}
+
+.hinta {
+    color: white;
+    font-size: 25px;
+    padding-left: 50px;
+}
+
+.nappi {
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 10px;
 }

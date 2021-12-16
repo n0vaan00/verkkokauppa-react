@@ -1,27 +1,22 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 import "./Product.css";
+import { Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 
 export default function Product({product,addToCart,url}) {
     
     return (
     <div style={{"padding":"10px"}}>
-        <div class="container" id="tuotesivu">
-            <div class="row">
-                <div class="col-5" id="kuva">
-                    <img src={url + 'images/' + product?.image} alt={product?.name}/>
-                </div>
-                <div class="col-2" id="otsikko">
-                    <p>{product?.name}</p>
-                </div>
-                <div class="col-4" id="teksti">
-                    <p>Tuotteen hinta: {product?.price}€</p>
-                </div>
-                <div class="col-12" id="teksti">
-                    <p>{product?.info}</p>
-                </div>
-            </div> 
-            <button class="btn btn-primary" type="button" onClick={e => addToCart(product)}>Lisää ostoskoriin</button>
-        </div>
+<Container>
+  <Row>
+    <Col md={4} className="nimi">{product?.name}</Col>
+    <Col md={{ span: 6, offset: 4 }} className="hinta">Tuotteen hinta: {product?.price}€</Col>
+    <Col md={{ span: 4}} className="kuva"><img src={url + 'images/' + product?.image} alt={product?.name}/></Col>
+    <Col md={{ span: 6}} className="info">{product?.info}</Col>
+    <Col md={{ span: 3}} className="nappi"><button class="btn btn-primary" type="button" onClick={e => addToCart(product)}>Lisää ostoskoriin</button></Col>
+  </Row>
+</Container>
     </div> 
     )
 }
