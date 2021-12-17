@@ -30,47 +30,46 @@ export default function Home({url}) {
             <Carousel>
                 <Carousel.Item>
                     <img
-                    id="mainos"
-                    className="d-block"
-                    src="mainoss1.jpg"
-                    alt="First slide"
+                      id="mainos"
+                      className="d-block"
+                      src="mainos2.jpg"
+                      alt="First slide"
                     />
                     <Carousel.Caption>
-                    <h3>Kato kato karvamato</h3>
-                    <Link style={{'color':'white'}} className="nav-link" aria-current="page" to="/ale">T-PAETOJA!</Link>
+                      <h3>Kato kato karvamato</h3>
+                      <Link style={{'color':'white'}} className="nav-link" aria-current="page" to="/ale">T-PAETOJA!</Link>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                    id="mainos"
-                    className="d-block"
-                    src="mainos4.jpg"
-                    alt="Second slide"
+                      id="mainos"
+                      className="d-block"
+                      src="mainos4.jpg"
+                      alt="Second slide"
                     />
                     <Carousel.Caption>
-                    <h3>MukaMegaALE</h3>
-                    <Link style={{'color':'white'}} className="nav-link" aria-current="page" to="/ale">Katoppa tonne!!</Link>
+                      <h3>MukaMegaALE</h3>
+                      <Link style={{'color':'white'}} className="nav-link" aria-current="page" to="/ale">Katoppa tonne!!</Link>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                    id="mainos"
-                    className="d-block"
-                    src="mainos3.jpg"
-                    alt="Third slide"
+                      id="mainos"
+                      className="d-block"
+                      src="mainos3.jpg"
+                      alt="Third slide"
                     />
-
                     <Carousel.Caption>
-                    <h3>Tästäki johki</h3>
-                    <Link style={{'color':'white'}} className="nav-link" aria-current="page" to="/ale">O se mahtava!!</Link>
+                      <h3>Tästäki johki</h3>
+                      <Link style={{'color':'white'}} className="nav-link" aria-current="page" to="/ale">O se mahtava!!</Link>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
         </div>
+        
         <div id="tarjoukset">
-        <h3 style={{'color':'white'}}>Huiman halapoja</h3>
-        <div style={{'display': 'inline-block'}}>
-              
+          <h3 style={{'color':'white'}}>Huiman halapoja</h3>
+          <div style={{'display': 'inline-block'}}>    
               {products.map(product => (
                 <div className="Card" key={product.id}>
                   <Link to={{

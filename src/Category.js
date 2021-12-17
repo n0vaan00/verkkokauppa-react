@@ -12,26 +12,25 @@ export default function Category({url,category,addToCart}) {
 
   useEffect(() => {
     if (category !== null){
-    axios.get(url + 'products/getproducts.php/' + category?.id)
-    .then((response) => {
-      const json = response.data;
-      setProducts(json);
-      console.log(category.id);
-    }).catch (error => {
+      axios.get(url + 'products/getproducts.php/' + category?.id)
+        .then((response) => {
+          const json = response.data;
+          setProducts(json);
+          console.log(category.id);
+        }).catch (error => {
       if (error.response === undefined) {
         alert(error);
       } else {
         alert(error.response.data.error);
       }
-    })
-  }
+      })
+    }
   }, [category])
         return (
             <>
             <h1 style={{'color': 'white', "padding-top":"20px"}}>{category?.name}</h1>
               
             <div style={{'display': 'inline-block'}}>
-              
               {products.map(product => (
                 <div className="Card" key={product.id}>
                   <Link to={{

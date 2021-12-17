@@ -134,6 +134,6 @@ export default function Order ({cart, updateAmount, removefromCart, empty, url})
         </div>
     )
   } else {
-    return (<div  style={{ 'padding': '200px', 'padding-bottom': '400px'}}><h3>Paitaässä kiittää tilauksestasi!!!</h3></div>);
+    return (<div style={{ 'padding': '200px', 'padding-bottom': '400px'}}><h3>Paitaässä kiittää tilauksestasi!!!</h3></div>);
   }
 }
