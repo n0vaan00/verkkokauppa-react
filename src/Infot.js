@@ -2,6 +2,7 @@ import React from 'react'
 
 export default function Infot() {
     return (
+        <div style={{"padding-bottom":"10px"}}>
         <div>
             <div id="atte">
             <h3>Atte Hakalahti</h3>
@@ -25,9 +26,19 @@ export default function Infot() {
                     <li>Mitä opit: Hacknplanin käyttöä paremmin, php soveltamista ja reactin käyttöä.</li>
                 </ul>
             </div>
-            <div id="miika"></div>
+            <div id="miika">
+                <h3>Miika Pesonen</h3>
+                <h5>Käytetyt tunnit:</h5>
+                <ul>
+                    <li>Miten projekti eteni: </li>
+                    <li>Mikä onnistui:</li>
+                    <li>Haasteita:</li>
+                    <li>Tiimin toiminta:</li>
+                    <li>Mitä opit:</li>
+                </ul></div>
             <div id="jaako"></div>
             <div id="yhteiset"></div>
+        </div>
         </div>
     )
 }
