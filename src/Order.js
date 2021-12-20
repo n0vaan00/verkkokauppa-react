@@ -51,7 +51,8 @@ export default function Order ({cart, updateAmount, removefromCart, empty, url})
 
   if (finished === false) {
     return (
-        <div style={{display:'inline-block'}}>
+        <div className='seina'>
+        <div className='tausta'>
             <div className='rivi'>
                 <h3 className='header'>Ostoskori</h3>
                 <table className='table'>
@@ -97,7 +98,7 @@ export default function Order ({cart, updateAmount, removefromCart, empty, url})
             </div>
             <div className='rivi'>
                 {cart.length > 0 && (
-                    <>
+                    <div className='tiedot'>
                         <h3 Classname='header'>Asiakas tiedot</h3>
                         <form onSubmit={order}>
                             <div className='form-group'>
@@ -128,9 +129,10 @@ export default function Order ({cart, updateAmount, removefromCart, empty, url})
                                 <button className='btn btn-primary'>Tilaa</button>
                             </div>
                         </form>
-                    </>
+                    </div>
                 )}
             </div>
+        </div>
         </div>
     )
   } else {

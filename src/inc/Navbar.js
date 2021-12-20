@@ -65,10 +65,6 @@ export default function NavBar({url,setCategory,cart}) {
                   <Link style={{'color':'white', 'padding-left':'30px','fontSize':'25px'}} className="nav-link" aria-current="page" to="/infot">Ryhmätiedot</Link>
                 </li>
           </ul>
-          <div className="search">
-            <button>Haku</button>
-            <input type="text"></input>
-          </div>
           <ul className="navbar-nav ml-auto">
             <li  className="nav-item">
               <Cart cart={cart}/>

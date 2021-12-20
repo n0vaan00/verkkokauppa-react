@@ -75,7 +75,7 @@ export default function Adminprod() {
           }, []) 
 
     return (
-        <div className="container" id="main">
+        <div className="containers" id="main">
           <Link style={{'color':'white','fontSize':'20px'}} className="nav-link" aria-current="page" to="/admincat">Hallinnoi tuoteryhmiä</Link>
 
           <h3>Lisää tuote</h3>

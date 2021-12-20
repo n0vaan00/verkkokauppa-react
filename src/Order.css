@@ -1,22 +1,54 @@
 td {
     border-bottom: 1px solid black;
-    width: 75px;
+    width: 100px;
     padding: 2px;
 }
 
 .table {
     color: white;
     padding-left: 100px;
-}
-
-.rivi {
     display: inline-block;
-    padding-right: 300px;
-    padding-bottom: 203px;
-    float: left;
+    padding-bottom: 30px;
 }
 
 .buttons {
-    padding-top: 10px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.rivi {
+    padding-right: 300px;
+    padding-left: 130px;
+    float: left;
+    padding-bottom: 30px;
+}
+
+.header {
+    padding-top: 40px;
+    padding-left: 100px;
+    size: 100px;
+    padding-bottom: 20px;
+}
+
+.tausta {
+    background-color: #253a35a2;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.tiedot {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+}
+
+.seina {
+    padding-bottom: 315px;
+    padding-top: 50px;
+    padding-left: 40px;
+}
+
+.form-control {
+    padding-right: 150px;
     padding-bottom: 10px;
 }
