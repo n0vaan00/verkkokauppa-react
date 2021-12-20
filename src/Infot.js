@@ -1,12 +1,13 @@
 import React from 'react'
+import './infot.css';
 
 export default function Infot() {
     return (
-        <div style={{"padding-bottom":"10px"}}>
-        <div>
+        <div style={{"padding-bottom":"10px", "padding": "50px"}}>
+        <div style={{"background-color": "#253a35a2", "border-radius": "20px", "padding": "50px"}}>
             <div id="atte">
             <h3>Atte Hakalahti</h3>
-            <h5>Käytetyt tunnit: 36h 30min</h5>
+            <h5>Käytetyt tunnit: 38h</h5>
             <ul>
                 <li>Miten projekti eteni: Ihan jees.</li>
                 <li>Mikä onnistui: Suunnittelimme kaiken hyvin etukäteen, kuten tapaamiset.</li>
@@ -28,13 +29,13 @@ export default function Infot() {
             </div>
             <div id="miika">
                 <h3>Miika Pesonen</h3>
-                <h5>Käytetyt tunnit:</h5>
+                <h5>Käytetyt tunnit: 33h</h5>
                 <ul>
-                    <li>Miten projekti eteni: </li>
-                    <li>Mikä onnistui:</li>
-                    <li>Haasteita:</li>
-                    <li>Tiimin toiminta:</li>
-                    <li>Mitä opit:</li>
+                    <li>Miten projekti eteni: Alun ongelmien jälkee ryhmätyö sujui ilman sen suurenpia pulmia </li>
+                    <li>Mikä onnistui:Ehdimme saada suurimman osan toiminnoista käyttökuntoon </li>
+                    <li>Haasteita: Kommunikaatiossa olisi voinut olla paramtamisen varaa</li>
+                    <li>Tiimin toiminta:Kun löysimme yhdessä työskentely aikaa työskentelymme onnistui ryhmässä ongelmitta</li>
+                    <li>Mitä opit: reactia, Hacknplania ja php:ta</li>
                 </ul>
             </div>
             <div id="jaako">
