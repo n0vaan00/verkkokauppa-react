@@ -3,8 +3,8 @@ import './infot.css';
 
 export default function Infot() {
     return (
-        <div style={{"padding-bottom":"10px"}}>
-        <div>
+        <div style={{"padding-bottom":"10px", "padding": "50px"}}>
+        <div style={{"background-color": "#253a35a2", "border-radius": "20px", "padding": "50px"}}>
             <div id="atte">
             <h3>Atte Hakalahti</h3>
             <h5>Käytetyt tunnit: 38h</h5>
