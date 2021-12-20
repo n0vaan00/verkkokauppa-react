@@ -1,4 +1,5 @@
 import React from 'react'
+import './infot.css';
 
 export default function Infot() {
     return (
@@ -6,7 +7,7 @@ export default function Infot() {
         <div>
             <div id="atte">
             <h3>Atte Hakalahti</h3>
-            <h5>Käytetyt tunnit: 36h 30min</h5>
+            <h5>Käytetyt tunnit: 38h</h5>
             <ul>
                 <li>Miten projekti eteni: Ihan jees.</li>
                 <li>Mikä onnistui: Suunnittelimme kaiken hyvin etukäteen, kuten tapaamiset.</li>
