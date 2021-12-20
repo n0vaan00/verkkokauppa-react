@@ -103,13 +103,13 @@ export default function Adminprod() {
           <br/>
     <div id="katlist">
       <h4>Kategoriat</h4>
-    <ol>
-        {tryhma?.map(ryhma =>(
-          <li key={ryhma.id} id="adminlista">
-            {ryhma.id}. {ryhma.name}&nbsp;
-          </li>
-        ))}
-      </ol>
+        <ol>
+          {tryhma?.map(ryhma =>(
+            <li key={ryhma.id} id="adminlista">
+              {ryhma.id}. {ryhma.name}&nbsp;
+            </li>
+          ))}
+        </ol>
     </div>
     </div>
     )
