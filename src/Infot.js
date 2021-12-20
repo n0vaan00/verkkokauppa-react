@@ -35,8 +35,19 @@ export default function Infot() {
                     <li>Haasteita:</li>
                     <li>Tiimin toiminta:</li>
                     <li>Mitä opit:</li>
-                </ul></div>
-            <div id="jaako"></div>
+                </ul>
+            </div>
+            <div id="jaako">
+                <h3>Jaako Taskila</h3>
+                <h5>Käytetyt tunnit: 22h</h5>
+                <ul>
+                    <li>Miten projekti eteni: Hitaanpuoleisesti mutta tuli kuitenkin valmiiksi.</li>
+                    <li>Mikä onnistui: Hacknplanin käyttö ja melkein kaikki tarvittavat toiminnot.</li>
+                    <li>Haasteita: React oli aika haastavaa, motivaation kanssa oli ongelmia henkilökohtaisesti.</li>
+                    <li>Tiimin toiminta: Pieniä ongelmia kommunikaatiossa mutta yleisesti mukava ilmapiiri ja tiimihenki.</li>
+                    <li>Mitä opit: Hacknplanin käyttöä, Reactia, PHP:tä ja tiimityöskentelyä.</li>
+                </ul>
+            </div>
             <div id="yhteiset"></div>
         </div>
         </div>
