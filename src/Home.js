@@ -32,7 +32,7 @@ export default function Home({url}) {
                     <img
                       id="mainos"
                       className="d-block"
-                      src="mainos2.jpg"
+                      src="mainos4.jpg"
                       alt="First slide"
                     />
                     <Carousel.Caption>
@@ -44,7 +44,7 @@ export default function Home({url}) {
                     <img
                       id="mainos"
                       className="d-block"
-                      src="mainos4.jpg"
+                      src="mainos3.jpg"
                       alt="Second slide"
                     />
                     <Carousel.Caption>
@@ -56,7 +56,7 @@ export default function Home({url}) {
                     <img
                       id="mainos"
                       className="d-block"
-                      src="mainos3.jpg"
+                      src="mainoss1.jpg"
                       alt="Third slide"
                     />
                     <Carousel.Caption>
